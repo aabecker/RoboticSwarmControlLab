@@ -1,0 +1,49 @@
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+
+
+\usepackage[colorlinks=true, urlcolor=blue, pdfborder={0 0 0}]{hyperref}
+\usepackage{geometry}
+\usepackage{overpic}
+\graphicspath{{./pictures/pdf/},{./pictures/ps/},{./pictures/png/},{./pictures/jpg/}}
+\begin{document}
+\author{Aaron T. Becker}
+\title{Particle Logic 2.0}
+\maketitle
+
+\begin{abstract}
+The Robotic Swarm Control Lab (RSCL) exists to
+ (1) understand, quantify, and implement the best methods for controlling huge numbers of robots, 
+ (2)  implement robotic solutions to medical problems, 
+ (3)  train confident, productive, ethical engineers to perform impactful research.
+
+This document explains how to earn lab access and the software suite we use.
+\end{abstract}
+
+
+\begin{itemize}
+\item our current memory element is not good enough for a journal submission. It is not conservative.  I'd like to represent state (true or false) by the position of a 2x1 slider.  This slider may require more than 1 CW cycle.
+
+\item a collection of obstacles and 2x1 sliders that work as a one-cycle delay:\\
+
+\begin{centering}
+\frame{ reservoir full of 1x1 components} \\
+$\downarrow$\\ 
+\frame{connecting line that feeds 1x1 components }\\
+$\downarrow$\\ 
+\frame{   one-cycle-delay      }   \\
+\end{centering}
+   
+OUTPUT:  every other CW cycle a 1x1 block comes out.  Currently we get a new component every CW cycle.  We'd like to get one every other cycle, or concatenate these to get a 1x1 output every n cycles.
+
+\item \emph{Preferential Assembly}
+  Add tiny magnets to some of the edges of the sliders so that sliders preferentially assemble if two sliders with mating arrangements hit each other. 
+  \begin{itemize}
+  	\item how many \emph{species} or \emph{slider varieties} can we construct?
+	\item our round sliders rotate, and don't have preferential orientations.  We could weight one side of the sliders.   Could octagonal sliders work in our present system?  Would they rotate?
+	\end{itemize} 
+\item Develop theory showing that we can use a CW cycle and deliver a polyomino part to a destination, and then with another CW cycle hit this part at an arbitrary location with an additional 1x1 part.  I want to show that we can build arbitrary shaped polyominoes, or prove that certain shapes cannot be constructed. For instance, using our sliders with magnets, can we construct an `o'-shaped arrangement using eight 1x1 sliders?
+\item read about \href{http://arxiv.org/abs/1408.3351}{Sandor's aTAM theory} and see if anything practical can be made of it.
+ \end{itemize} 
+ 
+ 
+ \end{document}
