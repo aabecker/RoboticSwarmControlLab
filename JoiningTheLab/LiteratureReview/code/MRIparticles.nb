@@ -1,0 +1,138 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3436,        128]
+NotebookOptionsPosition[      2938,        106]
+NotebookOutlinePosition[      3284,        121]
+CellTagsIndexPosition[      3241,        118]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Nature", " ", "2008.", "  ", "Zabow"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6246241507390366`*^9, 3.624624158708833*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]\[Omega]", "=", 
+  RowBox[{
+   RowBox[{"-", "\[Gamma]"}], " ", "Js", " ", 
+   RowBox[{"(", 
+    FractionBox[
+     SuperscriptBox["hR", "2"], 
+     RowBox[{"2", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["R", "2"], "+", 
+         SuperscriptBox["S", "2"]}], ")"}], 
+       RowBox[{"3", "/", "2"}]]}]], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.624624165896552*^9, 3.6246242314671087`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "\[Gamma]"}], " ", "Js", " ", 
+  RowBox[{"(", 
+   FractionBox[
+    SuperscriptBox["hR", "2"], 
+    RowBox[{"2", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["R", "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox["R", "2"], ")"}], "2"]}], ")"}], 
+      RowBox[{"3", "/", "2"}]]}]], ")"}]}]], "Input",
+ CellChangeTimes->{{3.6246242414421053`*^9, 3.6246242487338347`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"4", " ", 
+    SuperscriptBox["hR", "2"], " ", "Js", " ", "\[Gamma]"}], 
+   RowBox[{"5", " ", 
+    SqrtBox["5"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      SuperscriptBox["R", "2"], ")"}], 
+     RowBox[{"3", "/", "2"}]]}]]}]], "Output",
+ CellChangeTimes->{3.624624249566918*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"4", " ", 
+      SuperscriptBox["hR", "2"], " ", "Js", " ", "\[Gamma]"}], 
+     RowBox[{"5", " ", 
+      SqrtBox["5"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        SuperscriptBox["R", "2"], ")"}], 
+       RowBox[{"3", "/", "2"}]]}]]}], ",", " ", 
+   RowBox[{"Assumptions", "\[RuleDelayed]", 
+    RowBox[{"R", ">", "0"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6246242781027713`*^9, 3.624624284982459*^9}},
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"4", " ", 
+    SuperscriptBox["hR", "2"], " ", "Js", " ", "\[Gamma]"}], 
+   RowBox[{"5", " ", 
+    SqrtBox["5"], " ", 
+    SuperscriptBox["R", "3"]}]]}]], "Output",
+ CellChangeTimes->{3.624624255545516*^9, 3.624624285736535*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 817},
+WindowMargins->{{476, Automatic}, {63, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 180, 4, 52, "Input"],
+Cell[740, 26, 470, 14, 57, "Input"],
+Cell[CellGroupData[{
+Cell[1235, 44, 475, 15, 64, "Input"],
+Cell[1713, 61, 341, 11, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2091, 77, 545, 16, 57, "Input"],
+Cell[2639, 95, 283, 8, 86, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

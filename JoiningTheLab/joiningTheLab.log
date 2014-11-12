@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.4)  5 NOV 2014 16:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.4)  12 NOV 2014 15:40
 entering extended mode
 **joiningTheLab.tex
 
@@ -180,6 +180,7 @@ File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
@@ -202,7 +203,7 @@ Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
 Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring ON on input line 6313.
 Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
@@ -242,34 +243,90 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@dimlist=\toks16
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(C:\Users\atbecker\AppData\Roaming\MiKTeX\2.9\tex\latex\overpic\overpic.sty
+Package: overpic 2010/09/13 v0.53  Overwriting graphics
+
+Package: overpic v0.53 <2010/09/13> (RN)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count104
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+(C:\Users\atbecker\AppData\Roaming\MiKTeX\2.9\tex\latex\eepic\epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count105
+\d@lta=\count106
+\@delta=\dimen127
+\@@delta=\dimen128
+\@gridcnt=\count107
+\@joinkind=\count108
+\@dotgap=\dimen129
+\@ddotgap=\dimen130
+\@x@diff=\count109
+\@y@diff=\count110
+\x@diff=\dimen131
+\y@diff=\dimen132
+\@dotbox=\box27
+\num@segments=\count111
+\num@segmentsi=\count112
+\@datafile=\read1
+)
+overpic: relative positioning in percent
+)
 (C:\Users\atbecker\Documents\GitHub\RoboticSwarmControlLab\JoiningTheLab\joinin
 gTheLab.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 5.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+\AtBeginShipoutBox=\box28
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 8.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count104
+\c@section@level=\count113
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
+LaTeX Info: Redefining \ref on input line 8.
+LaTeX Info: Redefining \pageref on input line 8.
+LaTeX Info: Redefining \nameref on input line 8.
 
 (C:\Users\atbecker\Documents\GitHub\RoboticSwarmControlLab\JoiningTheLab\joinin
 gTheLab.out)
@@ -311,33 +368,112 @@ gTheLab.out)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-Underfull \hbox (badness 6173) in paragraph at lines 10--12
+(C:\Users\atbecker\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen133
+\scratchbox=\box29
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen134
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks18
+)
+Underfull \hbox (badness 6173) in paragraph at lines 13--18
 []\OT1/ptm/b/it/9 Abstract\OT1/ptm/b/n/9 ---The Robotic Swarm Con-trol Lab
  []
 
+<./pictures/pdf/JoiningLabFlowChart.pdf, id=15, 505.89pt x 542.025pt>
+File: ./pictures/pdf/JoiningLabFlowChart.pdf Graphic file (type pdf)
+
+<use ./pictures/pdf/JoiningLabFlowChart.pdf>
+Package pdftex.def Info: ./pictures/pdf/JoiningLabFlowChart.pdf used on input l
+ine 28.
+(pdftex.def)             Requested size: 207.77542pt x 222.6204pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 21.
+(Font)              <8> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 21.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 23.
+(Font)              <6> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 29.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--53
+[]\OT1/ptm/m/n/10 Browse through our YouTube chan-nel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--53
+[][]\OT1/ptm/m/n/10 youtube.com/aabecker5/[][], [][]Math-e-mat-ica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--53
+\OT1/ptm/m/n/10 Demon-stra-tions[][] Gam-i-fi-ca-tion re-search:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--53
+[][]\OT1/ptm/m/n/10 Swarm-Con-trol.net[][], and pa-pers:
+ []
+
+
+Overfull \hbox (28.83241pt too wide) in paragraph at lines 37--53
+[][]\OT1/ptm/m/n/10 scholar.google.com/citations?user=6kGt1DEAAAAJ[][]
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 37--53
+\OT1/ptm/m/n/10 prob-lem o Any skills you bring to the
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 37--53
+\OT1/ptm/m/n/10 project o Fund-ing re-quire-ments. Fund-ing
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 37--53
+\OT1/ptm/m/n/10 stu-dents is dif-fi-cult, but there are some
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 61.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 []\OT1/ptm/m/n/10 Second, in-stall Tex-maker, a front end
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-\OT1/ptm/m/n/10 for L[]T[]X[]$\OT1/pcr/m/n/10 http : / / www . xm1math . net /$
-
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+\OT1/ptm/m/n/10 for L[]T[]X[][]$\OT1/pcr/m/n/10 http : / / www . xm1math . net 
+/$
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 42.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 42.
+[1{C:/Users/atbecker/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <C:/Users/atbecker/Documents/GitHub/RoboticSwarmControlLab/JoiningTheLab/pictu
+res/pdf/JoiningLabFlowChart.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+[]\OT1/ptm/m/n/10 To sub-scribe or un-sub-scribe
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+\OT1/ptm/m/n/10 via the World Wide Web, visit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+\OT1/ptm/m/n/10 http://duerer.usc.edu/mailman/listinfo.cgi/robotics-
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -349,42 +485,47 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
-[1{C:/Users/atbecker/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
 
 (C:\Users\atbecker\Documents\GitHub\RoboticSwarmControlLab\JoiningTheLab\joinin
 gTheLab.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
-Package rerunfilecheck Info: File `joiningTheLab.out' has not changed.
-(rerunfilecheck)             Checksum: FFC92095351B36EFBB7E4735C27D5436;238.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+
+
+Package rerunfilecheck Warning: File `joiningTheLab.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `joiningTheLab.out':
+(rerunfilecheck)             Before: 0F0B4356ED68A0A6223843ACD870E631;176
+(rerunfilecheck)             After:  A49241B3BA9A575823AF02FB6B19857B;416.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
  ) 
 Here is how much of TeX's memory you used:
- 5303 strings out of 493921
- 82780 string characters out of 3144867
- 165459 words of memory out of 3000000
- 8590 multiletter control sequences out of 15000+200000
+ 6181 strings out of 493921
+ 94664 string characters out of 3144867
+ 181879 words of memory out of 3000000
+ 9428 multiletter control sequences out of 15000+200000
  39630 words of font info for 76 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,8n,28p,515b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,9n,28p,515b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on joiningTheLab.pdf (1 page, 99319 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
+/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on joiningTheLab.pdf (2 pages, 398014 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 13 named destinations out of 1000 (max. 500000)
+ 30 words of extra memory for PDF output out of 10000 (max. 10000000)
 

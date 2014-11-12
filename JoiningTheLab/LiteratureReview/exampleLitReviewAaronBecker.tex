@@ -1,0 +1,111 @@
+%  This is an example literature review.  You can download the file and modify it for your use.  
+% You need 
+%   a .tex file, where your paper text is written (this document)
+%   a .bib file, where your references go
+%   the file ieeeconf.cls   This file formats the document as an IEEE conference paper
+%
+%
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\begin{document}
+\author{Aaron T. Becker}
+\title{Designing Micro-fabricated fiducials for cellular tracking with MRI}
+\maketitle
+
+\begin{abstract}
+A Magnetic Resonance Imaging (MRI) scanner typically has a minimum resolution of 0.2x0.2mm$^2$ with a high-field 7T scanner and 0.5x0.5mm$^2$ with a clinical 3T scanner\cite{olamaei2011accurate}.
+
+Cells are generally much smaller than this resolution:\footnote{For a catalog of useful biological numbers, see \url{bioNumbers.org}}
+red blood cells are 6-8 $\mu$m, 
+human muscle cells are 1 – 40 mm in length and 10 – 50 $\mu$m in width~\cite{lodish2000muscle}
+squamous Epithelial Cells are 30-60 $\mu$m, irregular thin flat flagstone shape with distinct edges~\cite{brunzel2004fundamentals}, %Brunzel, Fundamentals of Urine and Body Fluid Analysis, 2004, page 193-199, 398-399 
+an E. coli bacterium is rod-shaped and approximately 0.7-1.4 $\mu$m in diameter by 2-4 $\mu$m in length~\cite{zaritsky1978chromosome}.
+
+Small particles of magnetic material are used as contrast agents in MRI. 
+These particles can be smaller than the resolution of the scanner because the particles produce dark spots in the image that are larger than the particles.  Individual particles as small as 1.68 $\mu$m can be detected using 7T MRI scanners, and as small as 15 $\mu$m using clinical 3T scanners. Particles produced by micro-fabrication processes can be more uniform and be easier to detect than those produced by chemical synthesis.
+
+
+
+%0.1mm\footnote{\url{http://incenter.medical.philips.com/doclib/enc/fetch/2000/4504/3634249/3634100/4987812/5025553/5068598/5529620/FS36_Aptip_BW_WFS.pdf}}.  
+\end{abstract}
+
+\section{Overview}
+
+MRI markers include nano-scale MRI-contrast agents~\cite{carroll2010experimental}, micro-scale particles, micro-fabricated MRI labels, and centimeter-scale fiducials. 
+
+MRI contrast agents and micro-particles usually require large concentrations of the material because individual particles cannot be resolved by MRI.
+
+BBBBB et. al designed markers for MRI with a key property that by varying lengths of the design, a scanning sequence could be designed to detect only one variety of the markers at a time.  The designed a stacked disc structure and a cylindrical shell.  Each designed owed its high signal to noise ratio on the fact that water would flow through the shape.
+
+Later the same team designed special micro-fabricated cuboids composed of iron or nickel covered in gold.  These are more effective than chemically produced spheres because they contain a.) purer magnetic material and b.) more magnetic material than similarly sized spheres.
+
+Many other groups have designed MRI labels for single-cell tracking.  This require either \emph{ultra-high field MRI}, defined as scanners with field strengths $\ge7$T, or specialized coil systems.
+
+
+
+
+\section{Engineered Particles that can be individually detected}
+
+\subsection{Micro-engineered  particles for multi-spectral MRI}
+
+Zabow et al. \cite{zabow2008micro} designed labels that frequency shift water by discrete amounts.  The phase shift can be designed  to make multiple distinguishable markers.  The markers must be aligned with the MRI $B_0$ field, but were designed anisotropically so they passively align. They presented a design using two nickel disks of radius $R$ separated by distance $S$. 
+
+Their Figure 3 showed 1.24mm discs designed for three different frequencies.  Each was distinguishable, Resolution was 500 x 750 $
+\mu$meter.  Figure 5 resolution was 100 x 100 $|mu$meter with much smaller particles 5$\mu$meter disks separated by 2$\mu$meters.  Each voxel contained 10 to 20 particles.
+
+They claim that their design with an open interior have a $10^4$ greater signal-to-noise ratio than enclosed designs.
+
+ 
+Competing methods:  labeling cells with superparamagnetic iron oxide (SPIO) nanoparticles or dentrimers\cite{bulte2001magnetodendrimers}, or micrometer-sized particles of iron oxide (MPIOs). These methods magnetically dephase the signal from water surrounding these particles.  
+ 
+ 
+ Specially engineered micro coils can be used for high resolution MRI imaging, but this requires the coils to be placed close to the target \cite{olson1995high}.  This paper referred to tests with 5 nano-liter samples for NMR spectroscopy.  THe coils used surrounded the capillary containing the liquid under interrogation. The coils were 1mm long, with an OD of 0.5mm. Since these are not for imaging, they could instead be used to indicate whether a compound was present or not.
+ 
+ \subsection{Magnetodendrimers}
+ \cite{bulte2001magnetodendrimers}
+ 
+ membrane adsorption process with subsequent localization in endosomes. Visible in MR with doses as low as 1 $\mu$g iron/ml culture mdeium.Labelled cells were detected with 9-14 pg/cell for up to 6 weeks after transplant. 
+ 
+
+ 
+ 
+\subsection{Stainless steel microparticles in capillaries}
+This work by Olamaeni et al. \cite{olamaei2011accurate} is inspired by therapeutic magnetic micro carriers -- $\approx 50\mu$m diameter drug capsules that can be steered and tracked by an MRI scanner. 
+
+Magnetic bodies create susceptibility artifacs in the MRI image. The paper\cite{olamaei2011accurate}  includes equations describing how the particle distorts the MRI image.  Testing used 0.4mm diameter chrome steel spheres with Gradient-Echo imaging. Pairs of particles are distinguishable when their distance is $\approx40$diameters apart. The imaging used 0.5 mm pixels on a 1.5 T Magnetom Siemens scanner.  The authors demonstrate a 15$\mu$m sphere is be detectable in a clinical scanner~\cite{olamaei2010mri}. Such a particle can navigate in large capillaries, which are 20$\mu$m in diameter, but cannot reach small capillaries, which are 4-5$\mu$m in diameter.
+ 
+ Later they demonstrated tracking 50$\mu$m diameter droplets of ferrofluid using a 1.5T scanner~\cite{olamaei2013magnetic}.  The droplets moved along a 50$\mu$m capillary and were tracked with Gradient-Echo imaging with 0.6mm voxels.  The droplets contained 10\% MNP (Fe$_\text{3}$O$_{\text{4}}$).
+ 
+ 
+ \section{Contrast agents and MRI fiducials}
+
+\subsection{nano particle MRI contrast agents}
+These typically use iron-oxide nanoparticles as MRI contrast agents.  Often the particles are collected by cells in the body, e.g. macrophages, and show are dark pixels in an MRI image.
+
+
+
+
+\subsection{Commercial MRI fiducial Markers}
+
+There are many products available today for MRI fiducials, used for image registration to link current scanned data with previous scans and targets. 
+MRI fiducials used in routine care range from large 20 mm markers designed to be stuck on the skin, or $\approx$20mm gold markers inserted via needle into the skin.
+These have a variety of forms, but are centimeter-scale large objects.
+
+
+MRI fiducials inserted by a 17-Gauge needle, made of 99.95\% gold construction with a snake-like design.  , 1.15mm x 1 cm, to 0.85mm x 3cm\footnote{\url{http://www.mriequip.com/store/pc/viewPrd.asp?idproduct=929}}
+
+Skin markers: \footnote{\url{http://www.beekley.com/MRI/MRSPOTS.asp}}, 1.75 cm Radiance{\texttrademark}filled flexible packets,  1.5cm Radiance{\texttrademark}filled tubes, to 3cm Radiance{\texttrademark}-filled tubes.
+
+Multi-modality Center-hole markers: \footnote{\url{http://www.universalmedicalinc.com/Center-Hole-Mammography-Skin-Marker-p/mm3002.htm}}, a flat disc with 2mm center hole, 15 mm outer diameter, 3.5mm thick, bright in MRI image.
+ 
+ 
+\bibliographystyle{IEEEtran}
+\bibliography{MRIrefs}
+
+
+\end{document}
+
+ 
