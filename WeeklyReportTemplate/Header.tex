@@ -1,0 +1,67 @@
+% Header template used for Weekly Reports
+\documentclass[11pt,twoside]{article}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+\setlength{\voffset}{0in}
+
+\providecommand{\titlesize}{small}
+
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{palatino}
+%\usepackage{cmbright}
+\newcommand{\myMargin}{1.00in}
+%\usepackage[pdftex]{hyperref}
+\usepackage[small,bf]{caption}
+\usepackage{amsmath}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{datetime}
+\usepackage{fancyvrb}
+\usepackage{color}
+\usepackage[\titlesize, compact]{titlesec}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{mdwlist}
+
+\newdateformat{dashdate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
+\def\Tiny{\fontsize{3pt}{3pt}\selectfont}
+
+\providecommand{\handoutName}{Handout title}
+\providecommand{\handoutdate}{Handout date}
+\providecommand{\duedate}{}
+
+\lhead{Meeting with Prof. Becker}
+\chead{}
+\rhead{ $<$INSERT YOUR NAME HERE$>$\\
+\handoutdate }
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{\dashdate \Tiny \textcolor{Gray}{\today}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\vspace{0.60in}
+\begin{center}
+{\Large\textbf{\handoutName}}\\
+\vspace{0.03in}
+\textbf{\duedate}\\
+\end{center}
+
+\newcommand{\todo}[1]{
+  \textcolor{Red}{
+    \begin{tabular}{|c|}
+      \hline
+      \em \large \bfseries todo: \normalfont \normalsize #1 \\
+      \hline
+    \end{tabular}}
+}
