@@ -141,7 +141,8 @@ robotics-worldwide is a weekly update of what is happening in robotics. To subsc
 \TextField[name=email,width=5cm,charsize=8pt,color=black]{Email:\hspace*{\fill}}\\
 Status:\hspace*{\fill} \ChoiceMenu[combo,name=status,width=3cm,charsize=10pt,default=undergrad]{\mbox{}}{volunteer,undergrad,MS,PhD} 
 
-\emph{\scriptsize Mark if you have each skill.  Let me know if there is something you really want to learn(TODO: parse the output to auto fill a spreadsheet)}
+\emph{\scriptsize Mark if you have each skill.  Let me know if there is something you really want to learn
+(TODO: parse the output to auto fill a spreadsheet)}
 
 %\begin{Form}
 %{\small\CheckBox{Check here if you like this form3: }}
@@ -150,25 +151,94 @@ Status:\hspace*{\fill} \ChoiceMenu[combo,name=status,width=3cm,charsize=10pt,def
 
 
 \subsection{Mathematics \& Control}
-\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}\item Hidden Markov Models (HMM) \item Nonlinear control design\item Numerical Optimization\item	PID control design\item	\href{http://en.wikipedia.org/wiki/Partially_observable_Markov_decision_process}{POMDP} \item	\href{http://cheng.staff.shef.ac.uk/proofguide/proofguide.pdf}{Proof writing}\item	\href{http://planning.cs.uiuc.edu/ch4.pdf}{Quaternions}\item	Random Process modeling\item	Statistical Analysis
-\end{itemize}
-\subsection{Electronics}
-\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}\item Antenna design\item Battery Design\item Circuit layout design/fabrication\\ \TextField[name=layoutSoftware,width=1cm,charsize=7pt,color=black]{(what software)}\item Microscopy\item Oscilloscope use \TextField[name=oscilloscope,width=1cm,charsize=7pt,color=black]{(what brand?)}\item Soldering\item Surface mount soldering
-\end{itemize}
-\subsection{Fabrication Skills}
-\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}\item Carpentry  \TextField[name=carpentry,width=1cm,charsize=7pt,color=black]{(framing/finish?)}\item CNC\item Have you ever made an electromagnet?\item Manual milling\item Masonry\item Welding \TextField[name=welding,width=2cm,charsize=7pt,color=black]{(what metals)}
-\end{itemize}\subsection{Software}
-\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}\item CAD software  \TextField[name=CAD,width=1cm,charsize=7pt,color=black]{(what software)}\item DSP programming \TextField[name=DSP,width=1cm,charsize=7pt,color=black]{(what type?)}\item LabVIEW \item Linux\item Mathematica\item Matlab\item MRI pulse sequence design (what type?)\item \href{http://playerstage.sourceforge.net/}{Player/stage}\item \href{www.ros.org}{Robot Operating System (ROS)}\item Microprocessors \TextField[name=microcontroller,width=1cm,charsize=7pt,color=black]{(which one)}\item OpenCV\item Comsol \TextField[name=Comsol,width=1cm,charsize=7pt,color=black]{(what packages?)}\item Finite Element Analysis \TextField[name=FEA,width=1cm,charsize=7pt,color=black]{(what software?)}
-\end{itemize}\subsection{Programming Languages (indicate skill level  `N'one, `B’asic, `I'ntermediate, `A'dvanced)}
 \begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
-\item C		\hspace*{\fill}\ChoiceMenu[combo,name=C,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}\item C++	\hspace*{\fill}\ChoiceMenu[combo,name=C++,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}\item Java 	\hspace*{\fill}\ChoiceMenu[combo,name=Java,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}\item Python 	\hspace*{\fill}\ChoiceMenu[combo,name=Python,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}\item Ruby on Rails 	\hspace*{\fill}\ChoiceMenu[combo,name=Ruby,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}\item Shell scripting 	\hspace*{\fill}\ChoiceMenu[combo,name=Shell,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}\item Web design 	\hspace*{\fill}\ChoiceMenu[combo,name=WebDesign,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
+\item Hidden Markov Models (HMM) 
+\item Nonlinear control design
+\item Numerical Optimization
+\item	PID control design
+\item	\href{http://en.wikipedia.org/wiki/Partially_observable_Markov_decision_process}{POMDP} 
+\item	\href{http://cheng.staff.shef.ac.uk/proofguide/proofguide.pdf}{Proof writing}
+\item	\href{http://planning.cs.uiuc.edu/ch4.pdf}{Quaternions}
+\item	Random Process modeling
+\item	Statistical Analysis
+\end{itemize}
+
+\subsection{Electronics}
+\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
+\item Antenna design
+\item Battery Design
+\item Circuit layout design/fabrication\\ \TextField[name=layoutSoftware,width=1cm,charsize=7pt,color=black]{(what software)}
+\item Microscopy
+\item Oscilloscope use \TextField[name=oscilloscope,width=1cm,charsize=7pt,color=black]{(what brand?)}
+\item Soldering
+\item Surface mount soldering
+\end{itemize}
+
+\subsection{Fabrication Skills}
+\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
+\item Carpentry  \TextField[name=carpentry,width=1cm,charsize=7pt,color=black]{(framing/finish?)}
+\item CNC
+\item Have you ever made an electromagnet?
+\item Manual milling
+\item Masonry
+\item Welding \TextField[name=welding,width=2cm,charsize=7pt,color=black]{(what metals)}
+\end{itemize}
+
+\subsection{Software}
+\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
+\item CAD software  \TextField[name=CAD,width=1cm,charsize=7pt,color=black]{(what software)}
+\item DSP programming \TextField[name=DSP,width=1cm,charsize=7pt,color=black]{(what type?)}
+\item LabVIEW 
+\item Linux
+\item Mathematica
+\item Matlab
+\item MRI pulse sequence design (what type?)
+\item \href{http://playerstage.sourceforge.net/}{Player/stage}
+\item \href{www.ros.org}{Robot Operating System (ROS)}
+\item Microprocessors \TextField[name=microcontroller,width=1cm,charsize=7pt,color=black]{(which one)}
+\item OpenCV
+\item Comsol \TextField[name=Comsol,width=1cm,charsize=7pt,color=black]{(what packages?)}
+\item Finite Element Analysis \TextField[name=FEA,width=1cm,charsize=7pt,color=black]{(what software?)}
+\end{itemize}
+\subsection{Programming Languages (indicate skill level  `N'one, `B’asic, `I'ntermediate, `A'dvanced)}
+\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
+\item C		\hspace*{\fill}\ChoiceMenu[combo,name=C,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
+\item C++	\hspace*{\fill}\ChoiceMenu[combo,name=C++,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
+\item Java 	\hspace*{\fill}\ChoiceMenu[combo,name=Java,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
+\item Python 	\hspace*{\fill}\ChoiceMenu[combo,name=Python,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
+\item Ruby on Rails 	\hspace*{\fill}\ChoiceMenu[combo,name=Ruby,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
+\item Shell scripting 	\hspace*{\fill}\ChoiceMenu[combo,name=Shell,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
+\item Web design 	\hspace*{\fill}\ChoiceMenu[combo,name=WebDesign,width=.5cm,charsize=10pt,default=N]{\mbox{}}{N,B,I,A}
 \item 	\TextField[name=name,width=5cm,charsize=8pt,bordercolor={0.2 0.2 0.7}]{Others:\hspace*{\fill}}
-\end{itemize}\subsection{Hobbies}
-\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}\item Microcontroller programming  (brand?)\item Model trains\item Quadcopters (construction or piloting?)\item RC airplanes (construction or piloting?)\item Rocketry\end{itemize}\subsection{Training}
+\end{itemize}
+
+\subsection{Hobbies}
 \begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
-\item Clean room training\item IRB training \emph{\small \href{https://www.citiprogram.org/}{at the CITI website} select “Register for the Course”. Select University of Houston as your institution, a username and password, and do coursework for Group 1.}\item Machine Shop training\item Medical training (CPR, first aid, …)\item Travel Planning\end{itemize}\subsection{Fine Arts} \begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}\item Drawing/Painting/Sculpture   \TextField[name=drawing,width=1cm,charsize=7pt,color=black]{(List:)}
+\item Microcontroller programming  (brand?)
+\item Model trains
+\item Quadcopters (construction or piloting?)
+\item RC airplanes (construction or piloting?)
+\item Rocketry
+\end{itemize}
+
+\subsection{Training}
+\begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
+\item Clean room training
+\item IRB training \emph{\small \href{https://www.citiprogram.org/}{at the CITI website} select “Register for the Course”. Select University of Houston as your institution, a username and password, and do coursework for Group 1.}
+\item Machine Shop training
+\item Medical training (CPR, first aid, …)
+\item Travel Planning
+\end{itemize}
+
+\subsection{Fine Arts} \begin{itemize} \renewcommand{\labelitemi}{\CheckBox{\tiny}}
+\item Drawing/Painting/Sculpture   \TextField[name=drawing,width=1cm,charsize=7pt,color=black]{(List:)}
 \item Gardening/cooking/baking \TextField[name=cooking/gardening,width=1cm,charsize=7pt,color=black]{(List:)}
-\item Graphic Design\item Music: instrument/sing \TextField[name=music,width=1cm,charsize=7pt,color=black]{(details)}\item Photography\item Scriptwriting/acting\item Sports/Dance/Martial Arts  \TextField[name=sport,width=1cm,charsize=7pt,color=black]{(List:)}\item Videography/movie editing  \TextField[name=movie,width=1cm,charsize=7pt,color=black]{(software:)}
+\item Graphic Design
+\item Music: instrument/sing \TextField[name=music,width=1cm,charsize=7pt,color=black]{(details)}
+\item Photography
+\item Scriptwriting/acting
+\item Sports/Dance/Martial Arts  \TextField[name=sport,width=1cm,charsize=7pt,color=black]{(List:)}
+\item Videography/movie editing  \TextField[name=movie,width=1cm,charsize=7pt,color=black]{(software:)}
 \end{itemize}
 
  \end{Form}
