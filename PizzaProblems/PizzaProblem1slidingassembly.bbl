@@ -45,9 +45,13 @@ A.~Becker, E.~D. Demaine, S.~P. Fekete, G.~Habibi, and J.~McLurkin,
 \BIBentrySTDinterwordspacing
 
 \bibitem{Becker2015}
+\BIBentryALTinterwordspacing
 H.~M. Shad, R.~Morris-Wright, E.~D. Demaine, S.~P. Fekete, and A.~T. Becker,
   ``\BIBforeignlanguage{English}{Particle computation: Device fan-out and
   binary memory},'' in \emph{\BIBforeignlanguage{English}{{IEEE} International
   Conference on Robotics and Automation {(ICRA)}}}, 2015 (under review).
+  [Online]. Available:
+  \url{https://github.com/aabecker/particleComputation/blob/master/fanout/FanOutgatesAndBinaryCounters.pdf}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

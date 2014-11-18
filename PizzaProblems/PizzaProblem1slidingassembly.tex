@@ -1,7 +1,7 @@
 \documentclass[letterpaper, 10 pt, conference]{ieeeconf}
 
 
-\usepackage[colorlinks=true, urlcolor=blue, pdfborder={0 0 0}]{hyperref}
+\usepackage[colorlinks=true, urlcolor=blue,bookmarks=true, citecolor=green,  pdfborder={0 0 0}]{hyperref}
 \usepackage{geometry}
 \usepackage{overpic}
 \graphicspath{{./pictures/pdf/},{./pictures/ps/},{./pictures/png/},{./pictures/jpg/}}
@@ -9,6 +9,8 @@
 \author{Aaron T. Becker}
 \title{Particle Logic 2.0}
 \maketitle
+
+
 
 \begin{abstract}
 This introduces the first \emph{pizza problem}, an challenge of unknown complexity that is accessible to all lab members.  A successful completion of one part of this problem entitles the solver and a guest to a free tutorial and meal at Prof. Becker's home -- learn how to make hand-tossed pizza!  
@@ -18,7 +20,9 @@ This introduces the first \emph{pizza problem}, an challenge of unknown complexi
 in complex environments, controlled not by individual navigation, but by a uniform global, external force.
 Consider a 2D grid world, in which all obstacles and robots are unit squares,
 and for each actuation, robots move maximally until they collide with an
-obstacle or another robot. We demonstrated components of \emph{particle computation} in this
+obstacle or another robot. 
+
+We demonstrated components of \emph{particle computation} in this
 world, designing obstacle configurations that implement {\sc and} and {\sc or}
 logic gates:  by using dual-rail logic, we designed {\sc not, nor, nand, xor,
 xnor} logic gates. With the help of 2$\times$1 robots we designed  {\sc fan-out} gates, which
@@ -26,7 +30,19 @@ is necessary for simulating the full range of complex interactions
 that are present in arbitrary digital circuits.  Using these gates we are able to establish the full range
 of computational universality as presented by complex digital circuits.  As
 an example we connect our logic elements to produce a 3-bit counter.  We also
-demonstrated how to implement a data storage element.
+demonstrated how to implement a data storage element. These techniques were implemented on the large prototype in Fig.~\ref{fig:prototype}.  {\sc Matlab} code for generating and actuating logic gates and other particle-computation gadgets are found at \href{https://github.com/aabecker/particleComputation/blob/master/fanout/code/matlab/gadgets.m}{\small github.com/aabecker/particleComputation/.../gadgets.m}.
+
+   \begin{figure}
+   \centering
+   \href{http://youtu.be/EJSv8ny31r8}{
+\begin{overpic}[width =\columnwidth]{pizzatossing.jpg}
+\end{overpic}}
+\caption{
+\label{fig:pizztoss}
+This could be you! Just complete a problem segment. }
+\vspace{-1em}
+\end{figure}
+
 
    \begin{figure}
    \centering
@@ -40,12 +56,23 @@ Gravity-fed hardware implementation of  particle computation.  The reconfigurabl
 \end{figure}
 
 
-The following are open projects for our lab:
+The following are open projects for our lab, which we describe as Particle Computation 2.0:
+
+
+ \begin{figure*}
+\begin{overpic}[width =2\columnwidth]{MemoryElement.pdf}
+\end{overpic}
+\caption{\label{fig:Memory}
+A flip-flop memory in \cite{Becker2015}.  This device has three inputs, \emph{Read}, \emph{Set}, \emph{Clear}, a state variable (shown in blue), and a $2\times 1$ slider.   Depending on which input is active, the \emph{clockwise} control sequence $\langle d,l,u,r \rangle$ will read, set, or clear the memory. This example runs by uncommenting line 89 \texttt{[G.obstacle\_pos,RobotPts] = memorycw; \%memory}, located at \href{https://github.com/aabecker/particleComputation/blob/master/fanout/code/matlab/gadgets.m}{\small github.com/.../matlab/gadgets.m}
+We want to make a similar gate that is conservative.
+}
+\end{figure*}
 
 \begin{enumerate}
-\item our current memory element is not good enough for a journal submission. It is not conservative.  I'd like to represent state (true or false) by the position of a 2x1 slider.  This slider may require more than 1 CW cycle.
+\item The current memory element, shown in Fig.~\ref{fig:Memory} is not good enough for a journal submission. It is not conservative.  In a \emph{conservative} gate, particles
+are neither created nor destroyed, and so the same number of particles enter and leave each gate.  This gate uses a particle to set the gate to true.  When the gate is cleared, if the gate was true this particle exits, but if it was false, no particle exits.  The new version should represent state (true or false) by the position of a 2$\times$1 slider.  This new gate may require more than 1 CW cycle.
 
-\item a collection of obstacles and 2x1 sliders that work as a one-cycle delay:\\
+\item Currently, all gates function after one clockwise cycle $\langle d,l,u,r \rangle$.  To use these gadgets as an automated factory a collection of obstacles and 2x1 sliders that work as a one-cycle delay:\\
 \begin{figure}
 \begin{centering}
 \frame{ reservoir full of 1x1 components} \\
@@ -62,15 +89,23 @@ $\downarrow$\\
    
 OUTPUT:  every other CW cycle a 1x1 block comes out.  Currently we get a new component every CW cycle.  We'd like to get one every other cycle, or concatenate these to get a 1x1 output every n cycles.
 
-\item \emph{Preferential Assembly}
+
+
+\item \emph{Preferential Assembly:}
   Add tiny magnets to some of the edges of the sliders so that sliders preferentially assemble if two sliders with mating arrangements hit each other. 
   \begin{itemize}
   	\item how many \emph{species} or \emph{slider varieties} can we construct?
 	\item our round sliders rotate, and don't have preferential orientations.  We could weight one side of the sliders.   Could octagonal sliders work in our present system?  Would they rotate?
 	\end{itemize} 
 \item Develop theory showing that we can use a CW cycle and deliver a polyomino part to a destination, and then with another CW cycle hit this part at an arbitrary location with an additional 1x1 part.  I want to show that we can build arbitrary shaped polyominoes, or prove that certain shapes cannot be constructed. For instance, using our sliders with magnets, can we construct an `o'-shaped arrangement using eight 1x1 sliders?
-\item read about \href{http://arxiv.org/abs/1408.3351}{Sandor's aTAM theory} and see if anything practical can be made of it.
+
+What is the minimum number of species required?  Can we accomplish generalized assembly with just North-pole-out and South-pole-out sliders?
+
+\item read about \href{http://arxiv.org/abs/1408.3351}{S\'{a}ndor's aTAM theory} and design components that could be assembled using this technique.
 \end{enumerate}
+
+
+
 
 
  \bibliographystyle{IEEEtran}
