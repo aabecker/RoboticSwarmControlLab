@@ -1,0 +1,195 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6631,        185]
+NotebookOptionsPosition[      5984,        158]
+NotebookOutlinePosition[      6330,        173]
+CellTagsIndexPosition[      6287,        170]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.625423113897545*^9, 3.625423135968752*^9}, {
+  3.625423181299284*^9, 3.6254232135245066`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"minimumVisibleSphereRad", "=", 
+   RowBox[{
+    FractionBox["18", "2"], "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VolumeOfSphere", "[", "r_", "]"}], ":=", 
+  RowBox[{
+   FractionBox["4", "3"], "\[Pi]", " ", 
+   SuperscriptBox["r", "3"]}]}]}], "Input",
+ CellChangeTimes->{{3.6254231417513294`*^9, 3.625423172387393*^9}, {
+  3.625423215373691*^9, 3.625423248692023*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"VolumeOfSphere", "[", "minimumVisibleSphereRad", "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.6254232252536793`*^9, {3.6254232625344067`*^9, 3.6254232726224155`*^9}}],
+
+Cell[BoxData["3.053628059289279`*^-15"], "Output",
+ CellChangeTimes->{{3.625423226071761*^9, 3.625423273127466*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MinimumLayerThickness", " ", "=", " ", 
+   RowBox[{"0.2", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StartingLength", " ", "=", " ", "0.002"}], ";", " ", 
+  RowBox[{"(*", "mm", "*)"}], "\[IndentingNewLine]"}]}], "Input",
+ CellChangeTimes->{{3.62542330276943*^9, 3.6254233205852113`*^9}, {
+  3.6254233600421567`*^9, 3.625423371099262*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"VolumeOfSphere", "[", "minimumVisibleSphereRad", "]"}], 
+  RowBox[{"MinimumLayerThickness", " ", "*", "StartingLength"}]]], "Input",
+ CellChangeTimes->{{3.6254233462407765`*^9, 3.625423398166969*^9}}],
+
+Cell[BoxData["7.634070148223197`*^-6"], "Output",
+ CellChangeTimes->{3.6254233985090027`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"Gray", ",", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", "minimumVisibleSphereRad"}], 
+       "]"}], ",", "\[IndentingNewLine]", " ", 
+      RowBox[{
+       RowBox[{"rectstart", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"minimumVisibleSphereRad", "*", "2"}], ",", 
+          RowBox[{"-", "minimumVisibleSphereRad"}]}], "}"}]}], ";", 
+       RowBox[{"Rectangle", "[", 
+        RowBox[{"rectstart", ",", 
+         RowBox[{"rectstart", "+", 
+          RowBox[{"{", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"VolumeOfSphere", "[", "minimumVisibleSphereRad", "]"}], 
+             RowBox[{"MinimumLayerThickness", " ", "*", "StartingLength"}]], 
+            ",", "StartingLength"}], "}"}]}]}], "]"}]}]}], 
+     "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"StartingLength", ",", 
+     RowBox[{"0.2", "*", 
+      RowBox[{"10", "^", 
+       RowBox[{"-", "6"}]}]}], ",", "0.002"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.625423441004252*^9, 3.6254235813102813`*^9}, {
+  3.625423614689619*^9, 3.6254236877249217`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`StartingLength$$ = 0.00011599999999999999`, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`StartingLength$$], 2.*^-7, 0.002}}, Typeset`size$$ = {
+    360., {131., 136.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`StartingLength$8532$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`StartingLength$$ = 2.*^-7},
+       "ControllerVariables" :> {
+        Hold[$CellContext`StartingLength$$, \
+$CellContext`StartingLength$8532$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{Gray, 
+         Disk[{0, 
+          0}, $CellContext`minimumVisibleSphereRad], $CellContext`rectstart = \
+{$CellContext`minimumVisibleSphereRad 
+            2, -$CellContext`minimumVisibleSphereRad}; 
+         Rectangle[$CellContext`rectstart, $CellContext`rectstart + \
+{$CellContext`VolumeOfSphere[$CellContext`minimumVisibleSphereRad]/($\
+CellContext`MinimumLayerThickness $CellContext`StartingLength$$), \
+$CellContext`StartingLength$$}]}], 
+      "Specifications" :> {{$CellContext`StartingLength$$, 2.*^-7, 0.002}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {178., 183.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6254234724593973`*^9, 3.625423490410192*^9}, 
+   3.625423592528403*^9, {3.6254236314102907`*^9, 3.6254236462687764`*^9}, {
+   3.625423684938643*^9, 3.6254236904271917`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1391, 1002},
+WindowMargins->{{84, Automatic}, {0, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 143, 2, 31, "Input"],
+Cell[703, 24, 476, 13, 82, "Input"],
+Cell[CellGroupData[{
+Cell[1204, 41, 217, 5, 31, "Input"],
+Cell[1424, 48, 116, 1, 31, "Output"]
+}, Open  ]],
+Cell[1555, 52, 445, 10, 72, "Input"],
+Cell[CellGroupData[{
+Cell[2025, 66, 239, 4, 48, "Input"],
+Cell[2267, 72, 93, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2397, 78, 1366, 33, 221, "Input"],
+Cell[3766, 113, 2202, 42, 410, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
