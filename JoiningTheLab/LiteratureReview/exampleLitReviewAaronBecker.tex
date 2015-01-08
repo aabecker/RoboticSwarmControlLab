@@ -9,12 +9,17 @@
 %TODO: download file: http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5626222&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D5626222
 
 \documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+\usepackage{xcolor}
+\newcommand\todo[1]{\textcolor{red}{#1}}   %I use this command to highlight areas that are unfinished
+%\renewcommand\todo[1]{}   % uncomment this to hide all \todo{} in the text.
+
+
 
 \usepackage{hyperref}
 \usepackage{geometry}
 \begin{document}
 \author{Aaron T. Becker}
-\title{Designing Micro-fabricated fiducials for cellular tracking with MRI}
+\title{Designing Micro-fabricated fiducials\\ for cellular tracking with MRI}
 \maketitle
 
 \begin{abstract}
@@ -35,6 +40,8 @@ These particles can be smaller than the resolution of the scanner because the pa
 \end{abstract}
 
 \section{Overview}
+MRI scanners offer a safe technique for imaging tissue deep within a living body.  However, it is often difficult to differentiate a tissue of interest from its surroundings using only magnetic resonance. Additionally, the tissue of interest may be too small to detect.  To solve these problems, MRI markers (also called tags or fiducials) are used, along with contrast agents.  This literature review compares MRI marking methods. 
+
 
 MRI markers include nano-scale MRI-contrast agents~\cite{carroll2010experimental}, micro-scale particles, micro-fabricated MRI labels, and centimeter-scale fiducials. 
 
@@ -45,10 +52,7 @@ Many groups are designing MRI labels for single-cell tracking.  These usually re
 
 Zabow et al. designed $\approx2\mu$ micro-fabricated markers for MRI with a key property that by varying lengths of the design, a scanning sequence could be designed to detect only one variety of the markers at a time.  They designed a stacked disc structure and a cylindrical shell\cite{zabow2008micro}.  Each designed owed its high signal to noise ratio on the fact that water would flow through the shape.
 
-Later the same team designed special micro-fabricated cuboids composed of iron or nickel covered in gold.  These are more effective than chemically produced spheres because they contain a.) purer magnetic material and b.) more magnetic material than similarly sized spheres.
-
-
-zabow2009design
+Later the same team designed special micro-fabricated cuboids composed of iron or nickel covered in gold.  These are more effective than chemically produced spheres because they contain a.) purer magnetic material and b.) more magnetic material than similarly sized spheres \cite{zabow2009design}.
 
 
 \section{Engineered Particles that can be individually detected}
@@ -66,12 +70,12 @@ They claim that their design with an open interior have a $10^4$ greater signal-
 Competing methods:  labeling cells with superparamagnetic iron oxide (SPIO) nanoparticles or dentrimers\cite{bulte2001magnetodendrimers}, or micrometer-sized particles of iron oxide (MPIOs). These methods magnetically dephase the signal from water surrounding these particles.  
  
  
- Specially engineered micro coils can be used for high resolution MRI imaging, but this requires the coils to be placed close to the target \cite{olson1995high}.  This paper referred to tests with 5 nano-liter samples for NMR spectroscopy.  THe coils used surrounded the capillary containing the liquid under interrogation. The coils were 1mm long, with an OD of 0.5mm. Since these are not for imaging, they could instead be used to indicate whether a compound was present or not.
+ Specially engineered micro coils can be used for high resolution MRI imaging, but this requires the coils to be placed close to the target \cite{olson1995high}.  This paper referred to tests with 5 nano-liter samples for NMR spectroscopy.  The coils used surrounded the capillary containing the liquid under interrogation. The coils were 1mm long, with an OD of 0.5mm. Since these are not for imaging, they could instead be used to indicate whether a compound was present or not.
  
  \subsection{Magnetodendrimers}
- \cite{bulte2001magnetodendrimers}
- 
- membrane adsorption process with subsequent localization in endosomes. Visible in MR with doses as low as 1 $\mu$g iron/ml culture mdeium.Labelled cells were detected with 9-14 pg/cell for up to 6 weeks after transplant. 
+
+ \emph{Magnetodendrimers} are magnetic tags used to efficiently label mammalian cells. These tags are diffused into the cell culture, and brought into the cells through a
+ membrane adsorption process with subsequent localization in endosomes.  They are visible in MR with doses as low as 1 $\mu$g iron/ml culture medium. Labelled cells were detected with 9-14 pg/cell for up to 6 weeks after transplant  \cite{bulte2001magnetodendrimers}. 
  
 
  
@@ -86,8 +90,8 @@ Magnetic bodies create susceptibility artifacs in the MRI image. The paper\cite{
  
  \section{Contrast agents and MRI fiducials}
 
-\subsection{nano particle MRI contrast agents}
-These typically use iron-oxide nanoparticles as MRI contrast agents.  Often the particles are collected by cells in the body, e.g. macrophages, and show are dark pixels in an MRI image.
+\subsection{nano-particle MRI contrast agents}
+These typically use iron-oxide nanoparticles as MRI contrast agents.  Often the particles are collected by cells in the body, e.g. macrophages, and show are dark pixels in an MRI image \todo{[?]}.
 
 
 
