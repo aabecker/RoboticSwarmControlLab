@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      7068,        191]
-NotebookOptionsPosition[      6417,        164]
-NotebookOutlinePosition[      6766,        179]
-CellTagsIndexPosition[      6723,        176]
+NotebookDataLength[     20745,        556]
+NotebookOptionsPosition[     18877,        487]
+NotebookOutlinePosition[     19235,        503]
+CellTagsIndexPosition[     19192,        500]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,32 +25,53 @@ Cell[BoxData[Cell["Draw the Particles For MRI", "Subsection",
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"minimumVisibleSphereRad", "=", 
-   RowBox[{
-    FractionBox["18", "2"], "*", 
-    SuperscriptBox["10", 
-     RowBox[{"-", "6"}]]}]}], ";", " ", 
-  RowBox[{"(*", 
-   RowBox[{"according", " ", "to", " ", "Martel", " ", "et", " ", "al"}], 
-   "*)"}], "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"VolumeOfSphere", "[", "r_", "]"}], ":=", 
+   RowBox[{"minimumVisibleSphereRad", "=", 
+    RowBox[{
+     FractionBox["18", "2"], "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "6"}]]}]}], ";"}], " ", 
+  RowBox[{"(*", 
    RowBox[{
-    FractionBox["4", "3"], "\[Pi]", " ", 
-    SuperscriptBox["r", "3"]}]}]}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+     "according", " ", "to", " ", "Martel", " ", "et", " ", "al", " ", "in", 
+      " ", "1.5", "T", " ", "MRI", "   ", 
+      RowBox[{"http", ":"}]}], "//", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ieeexplore", ".", "ieee", ".", "org"}], "/", "xpl"}], "/", 
+      RowBox[{"login", ".", 
+       RowBox[{"jsp", "?", "tp"}]}]}]}], "=", 
+    RowBox[{
+     RowBox[{"&", "arnumber"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"5626222", "&"}], "url"}], "=", 
+      RowBox[{"http", "%3", "A", "%2", "F", "%2", 
+       RowBox[{"Fieeexplore", ".", "ieee", ".", "org"}], "%2", "Fxpls", "%2", 
+       
+       RowBox[{"Fabs_all", ".", "jsp"}], "%3", "Farnumber", "%3", 
+       "D5626222"}]}]}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VolumeOfSphere", "[", "r_", "]"}], ":=", 
+  RowBox[{
+   FractionBox["4", "3"], "\[Pi]", " ", 
+   SuperscriptBox["r", "3"]}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"MaxLayerThickness", " ", "=", " ", 
    RowBox[{"0.2", "*", 
     SuperscriptBox["10", 
      RowBox[{"-", "6"}]]}]}], ";", "  ", 
   RowBox[{"(*", " ", 
-   RowBox[{"conversation", " ", "with", " ", "Paul"}], "*)"}], 
-  "\[IndentingNewLine]", 
+   RowBox[{"conversation", " ", "with", " ", "Paul", " ", 
+    RowBox[{"R", "."}]}], "*)"}], "\[IndentingNewLine]", 
   RowBox[{"StartingLength", " ", "=", " ", "0.002"}], ";", " ", 
   RowBox[{"(*", "mm", "*)"}], "\[IndentingNewLine]"}]}], "Input",
  CellChangeTimes->{{3.6254231417513294`*^9, 3.625423172387393*^9}, {
   3.625423215373691*^9, 3.625423248692023*^9}, {3.625920762695915*^9, 
-  3.6259208023268776`*^9}}],
+  3.6259208023268776`*^9}, {3.627898141048102*^9, 3.627898149358482*^9}, {
+  3.627983819305225*^9, 3.627983820073764*^9}}],
 
 Cell[CellGroupData[{
 
@@ -62,7 +83,8 @@ Cell[BoxData[
   3.6254232252536793`*^9, {3.6254232625344067`*^9, 3.6254232726224155`*^9}}],
 
 Cell[BoxData["3.053628059289279`*^-15"], "Output",
- CellChangeTimes->{{3.625423226071761*^9, 3.625423273127466*^9}}]
+ CellChangeTimes->{{3.625423226071761*^9, 3.625423273127466*^9}, 
+   3.627876232988996*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -74,11 +96,13 @@ Cell[CellGroupData[{
 Cell[BoxData[
  FractionBox[
   RowBox[{"VolumeOfSphere", "[", "minimumVisibleSphereRad", "]"}], 
-  RowBox[{"MinimumLayerThickness", " ", "*", "StartingLength"}]]], "Input",
- CellChangeTimes->{{3.6254233462407765`*^9, 3.625423398166969*^9}}],
+  RowBox[{"MaxLayerThickness", " ", "*", "StartingLength"}]]], "Input",
+ CellChangeTimes->{{3.6254233462407765`*^9, 3.625423398166969*^9}, 
+   3.627876260936058*^9}],
 
 Cell[BoxData["7.634070148223197`*^-6"], "Output",
- CellChangeTimes->{3.6254233985090027`*^9}]
+ CellChangeTimes->{
+  3.6254233985090027`*^9, {3.627876236147377*^9, 3.6278762615726013`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -107,51 +131,64 @@ Cell[BoxData[
            RowBox[{
             FractionBox[
              RowBox[{"VolumeOfSphere", "[", "minimumVisibleSphereRad", "]"}], 
-             RowBox[{"MinimumLayerThickness", " ", "*", "StartingLength"}]], 
-            ",", "StartingLength"}], "}"}]}]}], "]"}]}]}], 
-     "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+             
+             RowBox[{"MaxLayerThickness", " ", "*", "StartingLength"}]], ",", 
+            "StartingLength"}], "}"}]}]}], "]"}]}]}], "\[IndentingNewLine]", 
+     "}"}], "]"}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{"StartingLength", ",", 
      RowBox[{"0.2", "*", 
       RowBox[{"10", "^", 
-       RowBox[{"-", "6"}]}]}], ",", "0.002"}], "}"}]}], "]"}]], "Input",
+       RowBox[{"-", "4"}]}]}], ",", "0.002"}], "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.625423441004252*^9, 3.6254235813102813`*^9}, {
-  3.625423614689619*^9, 3.6254236877249217`*^9}}],
+  3.625423614689619*^9, 3.6254236877249217`*^9}, {3.6278762657655*^9, 
+  3.6278763006852093`*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`StartingLength$$ = 2.*^-7, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{WolframAlphaClient`Private`StartingLength$$ = 
+    0.00010599999999999999`, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`StartingLength$$], 2.*^-7, 0.002}}, Typeset`size$$ = {
-    360., {120., 125.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`StartingLength$826$$ = 0}, 
+      Hold[WolframAlphaClient`Private`StartingLength$$], 0.00002, 0.002}}, 
+    Typeset`size$$ = {360., {112., 116.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    WolframAlphaClient`Private`StartingLength$30713$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {$CellContext`StartingLength$$ = 2.*^-7},
-       "ControllerVariables" :> {
-        Hold[$CellContext`StartingLength$$, $CellContext`StartingLength$826$$,
-          0]}, "OtherVariables" :> {
+     1, StandardForm, 
+      "Variables" :> {WolframAlphaClient`Private`StartingLength$$ = 0.00002}, 
+      "ControllerVariables" :> {
+        Hold[
+        WolframAlphaClient`Private`StartingLength$$, 
+         WolframAlphaClient`Private`StartingLength$30713$$, 0]}, 
+      "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> Graphics[{Gray, 
-         Disk[{0, 
-          0}, $CellContext`minimumVisibleSphereRad], $CellContext`rectstart = \
-{$CellContext`minimumVisibleSphereRad 
-            2, -$CellContext`minimumVisibleSphereRad}; 
-         Rectangle[$CellContext`rectstart, $CellContext`rectstart + \
-{$CellContext`VolumeOfSphere[$CellContext`minimumVisibleSphereRad]/($\
-CellContext`MinimumLayerThickness $CellContext`StartingLength$$), \
-$CellContext`StartingLength$$}]}], 
-      "Specifications" :> {{$CellContext`StartingLength$$, 2.*^-7, 0.002}}, 
+         Disk[{0, 0}, WolframAlphaClient`Private`minimumVisibleSphereRad], 
+         WolframAlphaClient`Private`rectstart = {
+           WolframAlphaClient`Private`minimumVisibleSphereRad 2, -
+            WolframAlphaClient`Private`minimumVisibleSphereRad}; 
+         Rectangle[
+          WolframAlphaClient`Private`rectstart, 
+           WolframAlphaClient`Private`rectstart + {
+            WolframAlphaClient`Private`VolumeOfSphere[
+              WolframAlphaClient`Private`minimumVisibleSphereRad]/(
+             WolframAlphaClient`Private`MaxLayerThickness 
+             WolframAlphaClient`Private`StartingLength$$), 
+             WolframAlphaClient`Private`StartingLength$$}]}], 
+      "Specifications" :> {{
+        WolframAlphaClient`Private`StartingLength$$, 0.00002, 0.002}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{411., {167., 172.}},
+     ImageSizeCache->{405., {169., 174.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
     SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
    Deployed->True,
@@ -159,12 +196,299 @@ $CellContext`StartingLength$$}]}],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{{3.6254234724593973`*^9, 3.625423490410192*^9}, 
    3.625423592528403*^9, {3.6254236314102907`*^9, 3.6254236462687764`*^9}, {
-   3.625423684938643*^9, 3.6254236904271917`*^9}, 3.6259207795636015`*^9}]
-}, Open  ]]
+   3.625423684938643*^9, 3.6254236904271917`*^9}, 3.6259207795636015`*^9, {
+   3.627876238720271*^9, 3.627876301075979*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Sqrt", "[", 
+  FractionBox[
+   RowBox[{"VolumeOfSphere", "[", "minimumVisibleSphereRad", "]"}], 
+   RowBox[{"MaxLayerThickness", " "}]], "]"}], "\[IndentingNewLine]", 
+ FractionBox[
+  RowBox[{"VolumeOfSphere", "[", "minimumVisibleSphereRad", "]"}], 
+  RowBox[{"MaxLayerThickness", " "}]]}], "Input",
+ CellChangeTimes->{{3.62789820270173*^9, 3.6278982192962847`*^9}, {
+  3.62789836775541*^9, 3.627898368067362*^9}}],
+
+Cell[BoxData["0.00012356431643660882`"], "Output",
+ CellChangeTimes->{{3.627898204829925*^9, 3.627898219649631*^9}, 
+   3.6278983685434*^9}],
+
+Cell[BoxData["1.5268140296446394`*^-8"], "Output",
+ CellChangeTimes->{{3.627898204829925*^9, 3.627898219649631*^9}, 
+   3.6278983685487347`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "The", " ", "most", " ", "conservative", " ", "measurements", " ", "I", 
+     " ", "have", " ", "are", " ", "for", " ", "a", " ", "1.5", " ", "T", " ",
+      "MRI", " ", "with", " ", "a", " ", "0.2", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "6"}]], " ", "thick", " ", "layer", " ", "of", " ", 
+     "Chrome", " ", "steel"}], ",", " ", 
+    RowBox[{
+    "is", " ", "a", " ", "square", " ", "with", " ", "each", " ", "side"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"0.12", "mm"}], ",", " ", 
+    RowBox[{"120", " ", "microns", " ", "on", " ", "a", " ", 
+     RowBox[{"side", ".", "  ", "1.5268140296446394`*^-8"}], " ", "square", 
+     " ", "meters", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"0.015", " ", 
+        SuperscriptBox["mm", "2"]}], ")"}], ".", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "In"}], " ", "a", " ", "7", "T", " ", "MRI"}], 
+    ",", " ", 
+    RowBox[{
+     RowBox[{"we", " ", "can", " ", "make", " ", "these", "  ", 
+      RowBox[{
+      "microns", ".", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       "Chrome"}], " ", "steel", " ", "reaches", " ", "its", " ", "magnetic", 
+      " ", "saturation", " ", "in", "  ", "The", " ", "magnetic", " ", 
+      "saturation", " ", "of", " ", "Chrome", " ", "steel", " ", "is", " ", 
+      "1.36", " ", 
+      SuperscriptBox["10", 
+       RowBox[{"6", " "}]], 
+      RowBox[{"A", "/", "m"}]}], ";", " ", 
+     RowBox[{
+     "We", " ", "can", " ", "get", " ", "proportional", " ", "size", " ", 
+      "decreases", " ", "by", " ", "choosing", " ", "materials", " ", "with", 
+      " ", "higher", " ", "magnetic", " ", 
+      RowBox[{
+      "saturations", ".", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]"}]}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6278982249103403`*^9, 3.6278983810822067`*^9}, {
+   3.627898482721786*^9, 3.627898499871966*^9}, {3.627981858476344*^9, 
+   3.6279818636919622`*^9}, {3.627981931669754*^9, 3.627981984090517*^9}, {
+   3.627982021808064*^9, 3.627982081533876*^9}, {3.627982244891139*^9, 
+   3.627982298501539*^9}, 3.627983072313725*^9, {3.6279831039870462`*^9, 
+   3.627983117831456*^9}, 3.627983334541872*^9},
+ EmphasizeSyntaxErrors->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1.5268140296446394`*^-8", "*", 
+  RowBox[{"10", "^", "6"}]}]], "Input",
+ CellChangeTimes->{{3.627898393333199*^9, 3.627898398266693*^9}}],
+
+Cell[BoxData["0.015268140296446395`"], "Output",
+ CellChangeTimes->{3.6278983987657127`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NumberForm", "[", 
+  RowBox[{"0.015268140296446395`", ",", "16"}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox["\<\"0.0152681402964464\"\>",
+   0.015268140296446395`,
+   AutoDelete->True],
+  NumberForm[#, 16]& ]], "Output",
+ CellChangeTimes->{3.627981913510949*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "change", " ", "in", " ", "resolution", " ", "from", " ", "pixel", " ", 
+    "edges", " ", "of", " ", "size", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{".5", "/", ".2"}], ")"}], "3"]}], "*)"}], "\[IndentingNewLine]", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    FractionBox["0.5", "0.2"], ")"}], "3"]}]], "Input",
+ CellChangeTimes->{{3.627981902817329*^9, 3.627981917651889*^9}, {
+  3.627981987476131*^9, 3.627981992354796*^9}, {3.6279832947958403`*^9, 
+  3.62798332490135*^9}}],
+
+Cell[BoxData["15.625`"], "Output",
+ CellChangeTimes->{3.6279819181570797`*^9, 3.627983325385768*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"120", "/", "6.25"}]}]], "Input"],
+
+Cell[BoxData["19.2`"], "Output",
+ CellChangeTimes->{3.627982018230228*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SurfaceAreaThinFilmIn7T", "=", 
+   RowBox[{
+    RowBox[{"1.5268140296446394`*^-8", "/", "15.625`"}], "*", 
+    RowBox[{"10", "^", "6"}]}]}], " ", 
+  RowBox[{"(*", " ", 
+   SuperscriptBox["mm", "2"], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"SquareEdgeLength7T", " ", "=", 
+  RowBox[{
+  "Sqrt", "[", "SurfaceAreaThinFilmIn7T", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"SurfaceAreaThinFilmIn7T", "*", 
+  RowBox[{"10", "^", "6"}]}]}], "Input",
+ CellChangeTimes->{{3.6279826433188133`*^9, 3.627982651293932*^9}, {
+  3.627983347629457*^9, 3.627983410886799*^9}, {3.6279834423640013`*^9, 
+  3.627983446633834*^9}, {3.627983513060403*^9, 3.627983522067458*^9}}],
+
+Cell[BoxData["0.0009771609789725694`"], "Output",
+ CellChangeTimes->{{3.62798264619555*^9, 3.627982651682391*^9}, 
+   3.6279833485978394`*^9, {3.627983392290637*^9, 3.6279834116143017`*^9}, 
+   3.627983447067388*^9}],
+
+Cell[BoxData["0.03125957419691716`"], "Output",
+ CellChangeTimes->{{3.62798264619555*^9, 3.627982651682391*^9}, 
+   3.6279833485978394`*^9, {3.627983392290637*^9, 3.6279834116143017`*^9}, 
+   3.6279834470743237`*^9}],
+
+Cell[BoxData["977.1609789725694`"], "Output",
+ CellChangeTimes->{{3.62798264619555*^9, 3.627982651682391*^9}, 
+   3.6279833485978394`*^9, {3.627983392290637*^9, 3.6279834116143017`*^9}, 
+   3.627983447079639*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", "0.002442902447431423`", "]"}]], "Input",
+ CellChangeTimes->{{3.6279830068520603`*^9, 3.627983008657024*^9}}],
+
+Cell[BoxData["0.04942572657464352`"], "Output",
+ CellChangeTimes->{3.627983009108404*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"19.2", "^", "2"}]], "Input",
+ CellChangeTimes->{{3.627982698422257*^9, 3.627982700364965*^9}}],
+
+Cell[BoxData["368.64`"], "Output",
+ CellChangeTimes->{3.627982700863963*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{".13", "^", "2"}]], "Input",
+ CellChangeTimes->{{3.6279827580937366`*^9, 3.6279827598433867`*^9}, 
+   3.627982847040804*^9}],
+
+Cell[BoxData["0.016900000000000002`"], "Output",
+ CellChangeTimes->{3.6279827602184134`*^9, 3.627982847422134*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"Paul", ",", 
+  RowBox[{
+  "Using", " ", "the", " ", "imaging", " ", "techniques", " ", "I", " ", 
+   "usually", " ", "use"}], ",", 
+  RowBox[{
+  "the", " ", "net", " ", "area", " ", "of", " ", "these", " ", "thin", " ", 
+   "devices", " ", "is", " ", "still", " ", "somewhat", " ", 
+   RowBox[{"large", ".", "The"}], " ", "most", " ", "conservative", " ", 
+   "measurements", " ", "I", " ", "have", " ", "are", " ", "for", " ", "a", 
+   " ", "1.5", " ", "T", " ", "MRI"}], ",", 
+  RowBox[{
+   RowBox[{"in", " ", "which", " ", "an", " ", "18"}], "-", 
+   RowBox[{
+   "micron", " ", "diameter", " ", "chrome", " ", "steel", " ", "ball", " ", 
+    "can", " ", "be", " ", 
+    RowBox[{"detected", ".", "Using"}], " ", "0.2", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"-", "6"}]}], " ", "thick", " ", "layer", " ", "of", " ", 
+    "chrome", " ", "steel"}]}], ",", 
+  RowBox[{
+  "the", " ", "net", " ", "required", " ", "area", " ", "is", " ", "a", " ", 
+   "square", " ", "with", " ", "each", " ", "side"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"0.12", " ", "mm", " ", 
+    RowBox[{"(", 
+     RowBox[{"120", " ", "microns", " ", "on", " ", "a", " ", "side"}], 
+     ")"}]}], ",", 
+   RowBox[{"or", " ", 
+    RowBox[{"1.5", "^", 
+     RowBox[{"-", "8"}]}], " ", "square", " ", "meters", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"0.015", " ", 
+       RowBox[{"mm", "^", "2"}]}], ")"}], ".", "We"}], " ", "will", " ", "be",
+     " ", "using", " ", "animal", " ", "MRIs"}], ",", 
+   RowBox[{"with", " ", "smaller", " ", "bores"}], ",", 
+   RowBox[{"higher", " ", "magnetic", " ", "fields"}], ",", 
+   RowBox[{"and", " ", "corresponding", " ", "better", " ", 
+    RowBox[{"resolution", ".", "A"}], " ", "1.5", " ", "T", " ", "MRI", " ", 
+    "can", " ", "image", " ", "voxels", " ", "0.5", "x0", ".5", "x0", ".5", 
+    "mm"}], ",", 
+   RowBox[{
+   "while", " ", "a", " ", "7", "T", " ", "MRI", " ", "can", " ", "image", 
+    " ", "0.2", "x0", ".2", "x0", ".2", 
+    RowBox[{"mm", ".", "In"}], " ", "a", " ", "7", " ", "T", " ", "MRI"}], 
+   ",", 
+   RowBox[{
+   "we", " ", "can", " ", "make", " ", "these", " ", "thin", " ", "particles",
+     " ", "squares"}], ",", 
+   RowBox[{"31", " ", "microns", " ", "on", " ", "a", " ", 
+    RowBox[{"side", ".", "The"}], " ", "area", " ", "can", " ", "be", " ", 
+    "divided", " ", "into", " ", "many", " ", "smaller", " ", "particles", 
+    " ", "because", " ", "superposition", " ", "holds", " ", "for", " ", 
+    RowBox[{"magnetism", ".", "We"}], " ", "just", " ", "need", " ", "to", 
+    " ", "ensure", " ", "that", " ", "there", " ", "is", " ", "a", " ", "net",
+     " ", "area", " ", "equal", " ", "to", " ", "31", "x31", " ", "microns", 
+    " ", "inside", " ", "a", " ", "0.2", "x0", ".2", "x0", ".2", "mm", " ", 
+    RowBox[{"voxel", ".", "These"}], " ", "calculations", " ", "were", " ", 
+    "made", " ", "using", " ", "chrome", " ", "steel"}], ",", 
+   RowBox[{
+   "which", " ", "reaches", " ", "its", " ", "magnetic", " ", "saturation", 
+    " ", "in", " ", "even", " ", "a", " ", "1.5", " ", "T", " ", 
+    RowBox[{"MRI", ".", "The"}], " ", "magnetic", " ", "saturation", " ", 
+    "of", " ", "chrome", " ", "steel", " ", "is", " ", "1.36", " ", 
+    RowBox[{"10", "^", "6"}], " ", 
+    RowBox[{"A", "/", 
+     RowBox[{"m", ".", "We"}]}], " ", "can", " ", "get", " ", "proportional", 
+    " ", "size", " ", "decreases", " ", "by", " ", "choosing", " ", 
+    "materials", " ", "with", " ", "higher", " ", "magnetic", " ", 
+    RowBox[{"saturations", ".", "To"}], " ", "use", " ", "smaller", " ", 
+    RowBox[{"particles", "/", "smaller"}], " ", "densities", " ", "probably", 
+    " ", "requires", " ", "custom", " ", 
+    RowBox[{"coils", ".", "Aaron"}], " ", 
+    RowBox[{"T", ".", "Becker"}]}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Assistant", " ", "Professor", " ", "in", " ", "Electrical"}], 
+    "&"}], " ", "Computer", " ", "Engineering"}], ",", 
+  RowBox[{"University", " ", "of", " ", "Houston"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"youtube", ".", "com"}], "/", "aabecker5"}], "/"}]}], "Input",
+ CellChangeTimes->{{3.627987226132118*^9, 3.627987226211031*^9}}]
 },
-WindowSize->{1391, 1002},
-WindowMargins->{{166, Automatic}, {Automatic, 121}},
-FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+WindowSize->{751, 1002},
+WindowMargins->{{19, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -179,20 +503,61 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 278, 3, 41, "Input"],
-Cell[838, 25, 1046, 27, 144, "Input"],
+Cell[838, 25, 1842, 48, 211, "Input"],
 Cell[CellGroupData[{
-Cell[1909, 56, 217, 5, 31, "Input"],
-Cell[2129, 63, 116, 1, 31, "Output"]
+Cell[2705, 77, 217, 5, 28, "Input"],
+Cell[2925, 84, 142, 2, 32, "Output"]
 }, Open  ]],
-Cell[2260, 67, 167, 2, 31, "Input"],
+Cell[3082, 89, 167, 2, 28, "Input"],
 Cell[CellGroupData[{
-Cell[2452, 73, 239, 4, 48, "Input"],
-Cell[2694, 79, 93, 1, 31, "Output"]
+Cell[3274, 95, 261, 5, 51, "Input"],
+Cell[3538, 102, 144, 2, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2824, 85, 1366, 33, 221, "Input"],
-Cell[4193, 120, 2208, 41, 356, "Output"]
-}, Open  ]]
+Cell[3719, 109, 1425, 35, 244, "Input"],
+Cell[5147, 146, 2736, 53, 360, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7920, 204, 439, 9, 93, "Input"],
+Cell[8362, 215, 140, 2, 28, "Output"],
+Cell[8505, 219, 144, 2, 32, "Output"]
+}, Open  ]],
+Cell[8664, 224, 2281, 49, 241, "Input"],
+Cell[CellGroupData[{
+Cell[10970, 277, 161, 3, 28, "Input"],
+Cell[11134, 282, 92, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11263, 288, 128, 3, 28, "Input"],
+Cell[11394, 293, 197, 6, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11628, 304, 546, 14, 69, "Input"],
+Cell[12177, 320, 100, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12314, 326, 72, 2, 28, "Input"],
+Cell[12389, 330, 74, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12500, 336, 693, 15, 66, "Input"],
+Cell[13196, 353, 216, 3, 28, "Output"],
+Cell[13415, 358, 216, 3, 28, "Output"],
+Cell[13634, 363, 212, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13883, 371, 145, 2, 28, "Input"],
+Cell[14031, 375, 89, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14157, 381, 118, 2, 28, "Input"],
+Cell[14278, 385, 76, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14391, 391, 147, 3, 28, "Input"],
+Cell[14541, 396, 114, 1, 28, "Output"]
+}, Open  ]],
+Cell[14670, 400, 4203, 85, 386, "Input"]
 }
 ]
 *)
