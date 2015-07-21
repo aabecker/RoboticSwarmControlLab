@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    100026,       2145]
-NotebookOptionsPosition[     97539,       2057]
-NotebookOutlinePosition[     97897,       2073]
-CellTagsIndexPosition[     97854,       2070]
+NotebookDataLength[    107941,       2414]
+NotebookOptionsPosition[    103945,       2275]
+NotebookOutlinePosition[    104303,       2291]
+CellTagsIndexPosition[    104260,       2288]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2053,7 +2053,225 @@ particles/smaller densities probably requires custom coils.\
 \>", "Text",
  CellChangeTimes->{{3.627987226132118*^9, 3.627987226211031*^9}, {
    3.630194542989552*^9, 3.630194564321307*^9}, {3.630194603522703*^9, 
-   3.6301946549362164`*^9}, 3.633110028312481*^9}]
+   3.6301946549362164`*^9}, 3.633110028312481*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Density of Magnetic material", "Section",
+ CellChangeTimes->{{3.646134240273656*^9, 3.646134247765235*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  
+  RowBox[{
+   RowBox[{
+   "Features", " ", "range", " ", "in", " ", "size", " ", "from", " ", "400", 
+    "nm"}], "\n", 
+   RowBox[{
+   "squares", " ", "to", " ", "2.4", " ", "\[Mu]m", " ", 
+    "squares"}]}]}]], "Input",
+ CellChangeTimes->{{3.64613327924503*^9, 3.646133296383979*^9}}],
+
+Cell[BoxData[
+ RowBox[{"32000000", " ", 
+  SuperscriptBox["nm", "3"]}]], "Output",
+ CellChangeTimes->{3.646133291869162*^9}],
+
+Cell[BoxData[
+ RowBox[{"400", " ", "Features", " ", "from", " ", "in", " ", "nm", " ", 
+  "range", " ", "size"}]], "Output",
+ CellChangeTimes->{3.64613329187114*^9}],
+
+Cell[BoxData[
+ RowBox[{"2.4`", " ", 
+  SuperscriptBox["squares", "2"], " ", "to", " ", "\[Mu]m"}]], "Output",
+ CellChangeTimes->{3.646133291873249*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"200", "nm", "*", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"400", "nm"}], ")"}], "2"], "*", ".25"}]], "Input",
+ CellChangeTimes->{{3.646133366124242*^9, 3.646133383463428*^9}}],
+
+Cell[BoxData[
+ RowBox[{"8.`*^6", " ", 
+  SuperscriptBox["nm", "3"]}]], "Output",
+ CellChangeTimes->{{3.646133358268724*^9, 3.646133384752964*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"200", "nm", "*", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1200", "nm"}], ")"}], "2"], "*", ".25"}]], "Input",
+ CellChangeTimes->{{3.646133395967031*^9, 3.646133396069146*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{".56", "*", "200", "nm"}]], "Input",
+ CellChangeTimes->{{3.646133448888502*^9, 3.6461334754948597`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"112.00000000000001`", " ", "nm"}]], "Output",
+ CellChangeTimes->{3.646133478268908*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", " ", 
+  RowBox[{"8747000", "/", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["10", "3"], ")"}], "3"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.646133744267055*^9, 3.646133746178653*^9}}],
+
+Cell[BoxData["0.008747`"], "Output",
+ CellChangeTimes->{{3.646133742577014*^9, 3.646133746578475*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"muDensity", " ", "=", " ", 
+   RowBox[{"8747", " ", 
+    RowBox[{"kg", "/", 
+     SuperscriptBox["m", "3"]}]}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"mumetal", " ", "density"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"muDensitygpermmcube", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"8747000", "/", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      SuperscriptBox["10", "3"], ")"}], "3"]}], " ", 
+   RowBox[{"g", "/", 
+    SuperscriptBox[
+     RowBox[{"(", "mm", ")"}], "3"], " ", 
+    RowBox[{"(*", 
+     RowBox[{"mumetal", " ", "density"}], "*)"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.646133514665778*^9, 3.646133549460002*^9}, {
+  3.646133677631282*^9, 3.6461337715785933`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"8747", " ", "kg"}], 
+  SuperscriptBox["m", "3"]]], "Output",
+ CellChangeTimes->{{3.6461335401213493`*^9, 3.646133550688532*^9}, 
+   3.646133732150157*^9, 3.646133772171894*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"8747", " ", "g"}], 
+  RowBox[{"1000000", " ", 
+   SuperscriptBox["mm", "3"]}]]], "Output",
+ CellChangeTimes->{{3.6461335401213493`*^9, 3.646133550688532*^9}, 
+   3.646133732150157*^9, 3.6461337721790733`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"volumeMuMetalPermm", " ", "=", 
+  RowBox[{".56", "*", "200", "*", 
+   SuperscriptBox["10", 
+    RowBox[{"-", "6"}]], "mm", "*", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "mm"}], ")"}], "2"]}]}]], "Input",
+ CellChangeTimes->{{3.6461335308428802`*^9, 3.64613353634972*^9}, {
+  3.6461335665927143`*^9, 3.646133647171247*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.00011200000000000001`", " ", 
+  SuperscriptBox["mm", "3"]}]], "Output",
+ CellChangeTimes->{{3.646133576086087*^9, 3.646133647871752*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"massMuMetalPermm", "*", "muDensitygpermmcube", "*", 
+  SuperscriptBox["10", "6"], 
+  RowBox[{"\[Mu]g", "/", "g"}]}]], "Input",
+ CellChangeTimes->{{3.6461336665871687`*^9, 3.646133669383396*^9}, {
+  3.646133778016765*^9, 3.646133811375476*^9}, {3.646134283616534*^9, 
+  3.646134284091002*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.979664`", " ", "\[Mu]g"}]], "Output",
+ CellChangeTimes->{
+  3.646133669781074*^9, {3.646133778637982*^9, 3.6461338119667807`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"volumeMuMetalPerVoxel", " ", "=", 
+  RowBox[{".56", "*", "200", "*", 
+   SuperscriptBox["10", 
+    RowBox[{"-", "6"}]], "mm", "*", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"0.2", "mm"}], ")"}], "2"]}]}]], "Input",
+ CellChangeTimes->{{3.6461335308428802`*^9, 3.64613353634972*^9}, {
+  3.6461335665927143`*^9, 3.646133647171247*^9}, {3.6461342895290194`*^9, 
+  3.646134293963847*^9}}],
+
+Cell[BoxData[
+ RowBox[{"4.480000000000001`*^-6", " ", 
+  SuperscriptBox["mm", "3"]}]], "Output",
+ CellChangeTimes->{{3.646133576086087*^9, 3.646133647871752*^9}, 
+   3.646134305360148*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"volumeMuMetalPerVoxel", "*", "muDensitygpermmcube", "*", 
+  SuperscriptBox["10", "6"], 
+  RowBox[{"\[Mu]g", "/", "g"}]}]], "Input",
+ CellChangeTimes->{{3.6461336665871687`*^9, 3.646133669383396*^9}, {
+  3.646133778016765*^9, 3.646133811375476*^9}, {3.646134287160947*^9, 
+  3.646134301053776*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.03918656000000001`", " ", "\[Mu]g"}]], "Output",
+ CellChangeTimes->{
+  3.646133669781074*^9, {3.646133778637982*^9, 3.6461338119667807`*^9}, {
+   3.646134302136546*^9, 3.646134307987729*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"100", "/", ".9"}]], "Input",
+ CellChangeTimes->{{3.6461404808211403`*^9, 3.646140517914916*^9}}],
+
+Cell[BoxData["111.11111111111111`"], "Output",
+ CellChangeTimes->{{3.6461405118193417`*^9, 3.6461405184103127`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"N", "[", 
+   RowBox[{"1200", "/", "111"}], "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.646140528371725*^9, 3.6461405409433947`*^9}}],
+
+Cell[BoxData["10.81081081081081`"], "Output",
+ CellChangeTimes->{{3.6461405311046124`*^9, 3.6461405413557987`*^9}}]
+}, Open  ]]
+}, Open  ]]
 },
 WindowSize->{751, 707},
 WindowMargins->{{250, Automatic}, {Automatic, 0}},
@@ -2146,7 +2364,58 @@ Cell[CellGroupData[{
 Cell[95797, 2025, 147, 3, 28, "Input"],
 Cell[95947, 2030, 114, 1, 28, "Output"]
 }, Open  ]],
-Cell[96076, 2034, 1459, 21, 277, "Text"]
+Cell[96076, 2034, 1459, 21, 277, "Text"],
+Cell[CellGroupData[{
+Cell[97560, 2059, 113, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[97698, 2064, 382, 10, 97, "Input"],
+Cell[98083, 2076, 124, 3, 32, "Output"],
+Cell[98210, 2081, 165, 3, 28, "Output"],
+Cell[98378, 2086, 151, 3, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98566, 2094, 206, 5, 32, "Input"],
+Cell[98775, 2101, 146, 3, 32, "Output"]
+}, Open  ]],
+Cell[98936, 2107, 207, 5, 32, "Input"],
+Cell[CellGroupData[{
+Cell[99168, 2116, 127, 2, 28, "Input"],
+Cell[99298, 2120, 111, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[99446, 2127, 232, 6, 36, "Input"],
+Cell[99681, 2135, 102, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[99820, 2141, 714, 20, 58, "Input"],
+Cell[100537, 2163, 215, 5, 48, "Output"],
+Cell[100755, 2170, 247, 6, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[101039, 2181, 360, 9, 32, "Input"],
+Cell[101402, 2192, 163, 3, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[101602, 2200, 316, 6, 32, "Input"],
+Cell[101921, 2208, 156, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[102114, 2216, 416, 10, 32, "Input"],
+Cell[102533, 2228, 188, 4, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[102758, 2237, 321, 6, 32, "Input"],
+Cell[103082, 2245, 217, 4, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[103336, 2254, 120, 2, 28, "Input"],
+Cell[103459, 2258, 116, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[103612, 2264, 187, 4, 46, "Input"],
+Cell[103802, 2270, 115, 1, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)
