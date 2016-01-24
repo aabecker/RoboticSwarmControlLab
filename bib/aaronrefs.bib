@@ -2,7 +2,7 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for ab55 at 2015-11-05 09:51:09 -0600 
+%% Created for ab55 at 2016-01-23 11:08:29 -0600 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
@@ -14,6 +14,37 @@
 @comment{jabref-meta: selector_keywords:}
 
 
+
+@article{Bender201551,
+	Abstract = {Abstract We study the minimum backlog problem (MBP). This online problem arises, e.g., in the context of sensor networks. We focus on two main variants of MBP. The discrete \{MBP\} is a 2-person game played on a graph G = ( V , E ) . The player is initially located at a vertex of the graph. In each time step, the adversary pours a total of one unit of water into cups that are located on the vertices of the graph, arbitrarily distributing the water among the cups. The player then moves from her current vertex to an adjacent vertex and empties the cup at that vertex. The player's objective is to minimize the backlog, i.e., the maximum amount of water in any cup at any time. The geometric \{MBP\} is a continuous-time version of the MBP: the cups are points in the two-dimensional plane, the adversary pours water continuously at a constant rate, and the player moves in the plane with unit speed. Again, the player's objective is to minimize the backlog. We show that the competitive ratio of any algorithm for the \{MBP\} has a lower bound of Ω ( D ) , where D is the diameter of the graph (for the discrete MBP) or the diameter of the point set (for the geometric MBP). Therefore we focus on determining a strategy for the player that guarantees a uniform upper bound on the absolute value of the backlog. For the absolute value of the backlog there is a trivial lower bound of Ω ( D ) , and the deamortization analysis of Dietz and Sleator gives an upper bound of O ( D log ⁡ N ) for N cups. Our main result is a tight upper bound for the geometric MBP: we show that there is a strategy for the player that guarantees a backlog of O ( D ) , independently of the number of cups. We also study a localized version of the discrete MBP: the adversary has a location within the graph and must act locally (filling cups) with respect to his position, just as the player acts locally (emptying cups) with respect to her position. We prove that deciding the value of this game is PSPACE-hard. },
+	Author = {Michael A. Bender and S{\'a}ndor P. Fekete and Alexander Kr{\"o}ller and Vincenzo Liberatore and Joseph S.B. Mitchell and Valentin Polishchuk and Jukka Suomela},
+	Date-Added = {2015-11-24 02:30:49 +0000},
+	Date-Modified = {2015-11-24 02:30:49 +0000},
+	Doi = {http://dx.doi.org/10.1016/j.tcs.2015.08.027},
+	Issn = {0304-3975},
+	Journal = {Theoretical Computer Science},
+	Keywords = {Games on graphs},
+	Pages = {51 - 61},
+	Title = {The minimum backlog problem},
+	Url = {http://www.sciencedirect.com/science/article/pii/S0304397515007744},
+	Volume = {605},
+	Year = {2015},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QLS4uLy4uLy4uLy4uL0RvY3VtZW50cy9QYXBlcnMvQmVuZGVyMjAxNTUxLnBkZtIXCxgZV05TLmRhdGFPEQGSAAAAAAGSAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADQW/sXSCsAAAAK+bcQQmVuZGVyMjAxNTUxLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM/UNNJ5KAEAAAAAAAAAAAAEAAMAAAkgAAAAAAAAAAAAAAAAAAAABlBhcGVycwAQAAgAANBcQWcAAAARAAgAANJ5fGEAAAABABAACvm3AArW9AAJRLsAApPVAAIAPU1hY2ludG9zaCBIRDpVc2VyczoAYWI1NToARG9jdW1lbnRzOgBQYXBlcnM6AEJlbmRlcjIwMTU1MS5wZGYAAA4AIgAQAEIAZQBuAGQAZQByADIAMAAxADUANQAxAC4AcABkAGYADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgAsVXNlcnMvYWI1NS9Eb2N1bWVudHMvUGFwZXJzL0JlbmRlcjIwMTU1MS5wZGYAEwABLwAAFQACAAv//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgC+AMMAywJhAmMCaAJzAnwCigKOApUCngKjArACswLFAsgCzQAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAALP},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1016/j.tcs.2015.08.027}}
+
+@inproceedings{Maftuleac2015LocalPatrol,
+	Abstract = {We present and analyze methods for patrolling and surveillance in an environment with a distributed swarm of robots with limited capabilities. Our approach is based on a distributed triangulation of the work space, in which a set of p stationary sensors provides coverage control; in addition, there are r mobile robots that can move between the sensors. Building on our prior work on structured exploration of unknown spaces with multi-robot systems, we can make use of a triangulation that is constructed in a distributed fashion and guarantees good local navigation properties, even when sensors and robots have very limited capabilities. One of the key challenges is to develop, analyze, implement and compare local strategies for allowing such a swarm to guard an environment structured in such a manner. As it turns out, this requires not only coming up with strategies that achieve full coverage given sufficient time, but also hinges on a number of crucial aspects that can make a dramatic difference when it comes to achieving good coverage frequency. These aspects have received some theoretical attention, but gaps have remained. We present: 1) A summary of how to achieve coverage by building a triangulation of the workspace, and the ensuing properties. 2) A description of simple local policies (LRV, for Least Recently Visited and LFV, for Least Frequently Visited) for achieving coverage by the patrolling robots. 3) New analytical arguments why different versions of LRV may require worst-case exponential time between visits of triangles. 4) Analytical evidence that a local implementation of LFV on the edges of the dual graph is possible in our scenario, and immensely better in the worst case. 5) Experimental and simulation validation for the practical usefulness of these policies, showing that even a small number of weak robots with weak local information can greatly outperform a single, powerful robots with full information and computational capabilities.},
+	Author = {Maftuleac, D. and Seoung Kyou Lee and Fekete, S.P. and Akash, A.K. and Lopez-Ortiz, A. and McLurkin, J.},
+	Booktitle = {Robotics and Automation (ICRA), 2015 IEEE International Conference on},
+	Date-Added = {2015-11-23 15:52:30 +0000},
+	Date-Modified = {2015-11-23 15:53:23 +0000},
+	Doi = {10.1109/ICRA.2015.7139433},
+	Keywords = {government policies;mobile robots;multi-robot systems;sensors;LFV;LRV;analytical arguments;computational capabilities;distributed triangulation;information capabilities;least frequently visited;least recently visited;local navigation properties;local policies;mobile robots;multi-robot systems;patrolling robots;robot swarm;stationary sensors;surveillance robots;work space;worst-case exponential time;Mobile robots;Navigation;Robot kinematics;Robot sensing systems;Sociology},
+	Month = {May},
+	Pages = {1809-1815},
+	Title = {Local policies for efficiently patrolling a triangulated region by a robot swarm},
+	Year = {2015},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QOS4uLy4uLy4uLy4uL0RvY3VtZW50cy9QYXBlcnMvTWFmdHVsZWFjMjAxNUxvY2FsUGF0cm9sLnBkZtIXCxgZV05TLmRhdGFPEQHCAAAAAAHCAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADQW/sXSCsAAAAK+bccTWFmdHVsZWFjMjAxNUxvY2FsUGF0cm9sLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM95o9J4khIAAAAAAAAAAAAEAAMAAAkgAAAAAAAAAAAAAAAAAAAABlBhcGVycwAQAAgAANBcQWcAAAARAAgAANJ45nIAAAABABAACvm3AArW9AAJRLsAApPVAAIASU1hY2ludG9zaCBIRDpVc2VyczoAYWI1NToARG9jdW1lbnRzOgBQYXBlcnM6AE1hZnR1bGVhYzIwMTVMb2NhbFBhdHJvbC5wZGYAAA4AOgAcAE0AYQBmAHQAdQBsAGUAYQBjADIAMAAxADUATABvAGMAYQBsAFAAYQB0AHIAbwBsAC4AcABkAGYADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgA4VXNlcnMvYWI1NS9Eb2N1bWVudHMvUGFwZXJzL01hZnR1bGVhYzIwMTVMb2NhbFBhdHJvbC5wZGYAEwABLwAAFQACAAv//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDKAM8A1wKdAp8CpAKvArgCxgLKAtEC2gLfAuwC7wMBAwQDCQAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAML}}
 
 @article{tsekos2007magnetic,
 	Author = {Tsekos, Nikolaos V and Khanicheh, Azadeh and Christoforou, Eftychios and Mavroidis, Constantinos},
@@ -59,8 +90,8 @@
 	Title = {MRI/fMRI-compatible robotic system with force feedback for interaction with human motion},
 	Volume = {11},
 	Year = {2006},
-	Bdsk-Url-1 = {http://dx.doi.org/10.1109/TMECH.2006.871897},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QPC4uLy4uLy4uLy4uL0RvY3VtZW50cy9QYXBlcnMvR2Fzc2VydDIwMDZNUklmb3JjZWZlZWRiYWNrLnBkZtIXCxgZV05TLmRhdGFPEQHOAAAAAAHOAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADQW/sXSCsAAAAK+bcfR2Fzc2VydDIwMDZNUklmb3JjZWZlZWRiYWNrLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMmwqtJg0lFhbGlzTUFDUwAEAAMAAAkgAAAAAAAAAAAAAAAAAAAABlBhcGVycwAQAAgAANBcQWcAAAARAAgAANJhJrEAAAABABAACvm3AArW9AAJRLsAApPVAAIATE1hY2ludG9zaCBIRDpVc2VyczoAYWI1NToARG9jdW1lbnRzOgBQYXBlcnM6AEdhc3NlcnQyMDA2TVJJZm9yY2VmZWVkYmFjay5wZGYADgBAAB8ARwBhAHMAcwBlAHIAdAAyADAAMAA2AE0AUgBJAGYAbwByAGMAZQBmAGUAZQBkAGIAYQBjAGsALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASADtVc2Vycy9hYjU1L0RvY3VtZW50cy9QYXBlcnMvR2Fzc2VydDIwMDZNUklmb3JjZWZlZWRiYWNrLnBkZgAAEwABLwAAFQACAAv//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDNANIA2gKsAq4CswK+AscC1QLZAuAC6QLuAvsC/gMQAxMDGAAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAMa}}
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QPC4uLy4uLy4uLy4uL0RvY3VtZW50cy9QYXBlcnMvR2Fzc2VydDIwMDZNUklmb3JjZWZlZWRiYWNrLnBkZtIXCxgZV05TLmRhdGFPEQHOAAAAAAHOAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADQW/sXSCsAAAAK+bcfR2Fzc2VydDIwMDZNUklmb3JjZWZlZWRiYWNrLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMmwqtJg0lFhbGlzTUFDUwAEAAMAAAkgAAAAAAAAAAAAAAAAAAAABlBhcGVycwAQAAgAANBcQWcAAAARAAgAANJhJrEAAAABABAACvm3AArW9AAJRLsAApPVAAIATE1hY2ludG9zaCBIRDpVc2VyczoAYWI1NToARG9jdW1lbnRzOgBQYXBlcnM6AEdhc3NlcnQyMDA2TVJJZm9yY2VmZWVkYmFjay5wZGYADgBAAB8ARwBhAHMAcwBlAHIAdAAyADAAMAA2AE0AUgBJAGYAbwByAGMAZQBmAGUAZQBkAGIAYQBjAGsALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASADtVc2Vycy9hYjU1L0RvY3VtZW50cy9QYXBlcnMvR2Fzc2VydDIwMDZNUklmb3JjZWZlZWRiYWNrLnBkZgAAEwABLwAAFQACAAv//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDNANIA2gKsAq4CswK+AscC1QLZAuAC6QLuAvsC/gMQAxMDGAAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAMa},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/TMECH.2006.871897}}
 
 @article{dempsey2001investigation,
 	Author = {Dempsey, Mary F and Condon, Barrie and Hadley, Donald M},
@@ -89,18 +120,18 @@
 	Url = {http://www.sciencedirect.com/science/article/pii/S0009926000906883},
 	Volume = {56},
 	Year = {2001},
-	Bdsk-Url-1 = {http://www.sciencedirect.com/science/article/pii/S0009926000906883},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QLy4uLy4uLy4uLy4uL0RvY3VtZW50cy9QYXBlcnMvRGVtcHNleTIwMDE0NTcucGRm0hcLGBlXTlMuZGF0YU8RAZoAAAAAAZoAAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAANBb+xdIKwAAAAr5txJEZW1wc2V5MjAwMTQ1Ny5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyaXM0mDOwwAAAAAAAAAAAAQAAwAACSAAAAAAAAAAAAAAAAAAAAAGUGFwZXJzABAACAAA0FxBZwAAABEACAAA0mEjIwAAAAEAEAAK+bcACtb0AAlEuwACk9UAAgA/TWFjaW50b3NoIEhEOlVzZXJzOgBhYjU1OgBEb2N1bWVudHM6AFBhcGVyczoARGVtcHNleTIwMDE0NTcucGRmAAAOACYAEgBEAGUAbQBwAHMAZQB5ADIAMAAwADEANAA1ADcALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAC5Vc2Vycy9hYjU1L0RvY3VtZW50cy9QYXBlcnMvRGVtcHNleTIwMDE0NTcucGRmABMAAS8AABUAAgAL//8AAIAG0hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc11OU011dGFibGVEYXRhox0fIFZOU0RhdGFYTlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVkQXJjaGl2ZXLRJidUcm9vdIABAAgAEQAaACMALQAyADcAQABGAE0AVQBgAGcAagBsAG4AcQBzAHUAdwCEAI4AwADFAM0CawJtAnICfQKGApQCmAKfAqgCrQK6Ar0CzwLSAtcAAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAAC2Q==}}
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QLy4uLy4uLy4uLy4uL0RvY3VtZW50cy9QYXBlcnMvRGVtcHNleTIwMDE0NTcucGRm0hcLGBlXTlMuZGF0YU8RAZoAAAAAAZoAAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAANBb+xdIKwAAAAr5txJEZW1wc2V5MjAwMTQ1Ny5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyaXM0mDOwwAAAAAAAAAAAAQAAwAACSAAAAAAAAAAAAAAAAAAAAAGUGFwZXJzABAACAAA0FxBZwAAABEACAAA0mEjIwAAAAEAEAAK+bcACtb0AAlEuwACk9UAAgA/TWFjaW50b3NoIEhEOlVzZXJzOgBhYjU1OgBEb2N1bWVudHM6AFBhcGVyczoARGVtcHNleTIwMDE0NTcucGRmAAAOACYAEgBEAGUAbQBwAHMAZQB5ADIAMAAwADEANAA1ADcALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAC5Vc2Vycy9hYjU1L0RvY3VtZW50cy9QYXBlcnMvRGVtcHNleTIwMDE0NTcucGRmABMAAS8AABUAAgAL//8AAIAG0hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc11OU011dGFibGVEYXRhox0fIFZOU0RhdGFYTlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVkQXJjaGl2ZXLRJidUcm9vdIABAAgAEQAaACMALQAyADcAQABGAE0AVQBgAGcAagBsAG4AcQBzAHUAdwCEAI4AwADFAM0CawJtAnICfQKGApQCmAKfAqgCrQK6Ar0CzwLSAtcAAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAAC2Q==},
+	Bdsk-Url-1 = {http://www.sciencedirect.com/science/article/pii/S0009926000906883}}
 
 @article{Chowdhury2015,
 	Author = {Chowdhury, Sagar and Jing, Wuming and Cappelleri, DavidJ.},
-	Booktitle = {Journal of Micro-Bio Robotics},
 	Da = {2015/10/01},
 	Date-Added = {2015-11-04 18:25:33 +0000},
-	Date-Modified = {2015-11-04 18:25:33 +0000},
+	Date-Modified = {2015-11-17 18:18:54 +0000},
 	Doi = {10.1007/s12213-015-0083-6},
 	Isbn = {2194-6418},
 	J2 = {J Micro-Bio Robot},
+	Journal = {Journal of Micro-Bio Robotics},
 	Keywords = {Microrobot; Multiple microrobots; Control; Microrobot teams; Microrobot swarms},
 	La = {English},
 	Number = {1-4},
@@ -365,9 +396,9 @@
 	Year = {2015}}
 
 @article{egerstedt2001formation,
-	Author = {EGERSTEDT, M},
+	Author = {Magnus Egerstedt and Xiaoming Hu},
 	Date-Added = {2015-09-16 01:37:53 +0000},
-	Date-Modified = {2015-09-16 01:37:53 +0000},
+	Date-Modified = {2016-01-23 17:08:25 +0000},
 	Journal = {IEEE Trans. Robotics Automat.},
 	Pages = {947--951},
 	Title = {Formation constrained multi-agent control},
@@ -3353,22 +3384,6 @@ url  ="http://dx.doi.org/10.1039/C2NR32554C",},
 	Volume = {33},
 	Year = {2014},
 	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QLC4uLy4uLy4uLy4uL0RvY3VtZW50cy9QYXBlcnMvQmVja2VyMjAxM2MucGRm0hcLGBlXTlMuZGF0YU8RAY4AAAAAAY4AAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAAMy961BIKwAAAB5uqQ9CZWNrZXIyMDEzYy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAk/uHz70vP1BERiBDQVJPAAQAAwAACSAAAAAAAAAAAAAAAAAAAAAGUGFwZXJzABAACAAAzL4/sAAAABEACAAAz711jwAAAAEAEAAebqkAEjPHABIzxgAL2gMAAgA8TWFjaW50b3NoIEhEOlVzZXJzOgBhYjU1OgBEb2N1bWVudHM6AFBhcGVyczoAQmVja2VyMjAxM2MucGRmAA4AIAAPAEIAZQBjAGsAZQByADIAMAAxADMAYwAuAHAAZABmAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAK1VzZXJzL2FiNTUvRG9jdW1lbnRzL1BhcGVycy9CZWNrZXIyMDEzYy5wZGYAABMAAS8AABUAAgAL//8AAIAG0hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc11OU011dGFibGVEYXRhox0fIFZOU0RhdGFYTlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVkQXJjaGl2ZXLRJidUcm9vdIABAAgAEQAaACMALQAyADcAQABGAE0AVQBgAGcAagBsAG4AcQBzAHUAdwCEAI4AvQDCAMoCXAJeAmMCbgJ3AoUCiQKQApkCngKrAq4CwALDAsgAAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAACyg==}}
-
-@unpublished{Becker2013e,
-	Author = {Aaron Becker and S. Fekete and A. Kr\"oller and S. Lee and J. McLurkin},
-	Booktitle = {(Rejected) International Symposium on Algorithms and Experiments for Sensor Systems, Wireless Networks and Distributed Robotics (ALGOSENSORS)},
-	Date-Added = {2013-12-05 19:08:58 +0000},
-	Date-Modified = {2013-12-05 19:08:59 +0000},
-	Title = {Exploration and Routing with a Swarm of Simple Robots},
-	Year = {2013}}
-
-@article{Lee2013,
-	Author = {SeoungKyou Lee and Alexander Kr{\"o}ller and Aaron Becker and S{\'a}ndor Fekete and James McLurkin},
-	Date-Added = {2013-12-05 19:08:58 +0000},
-	Date-Modified = {2013-12-05 19:08:59 +0000},
-	Journal = {IEEE Transactions on Robotics},
-	Title = {Exploration via Structured Triangulation by a Multi-Robot System with Low-Resolution Sensors},
-	Year = {2013 (in preparation)}}
 
 @article{Diller2013,
 	Abstract = {A major challenge for untethered microscale mobile robotics is the control of many agents in the same workspace for distributed operation. In this work, we present a new method to independently control multiple sub-mm microrobots in three dimensions (3D) using magnetic gradient pulling as the 3D motion generation method. Motion differentiation is accomplished through the use of geometrically or magnetically distinct microrobots which assume different magnetization directions in a rotating or oscillating magnetic field. This allows for different magnetic forces to be exerted on each, enabling independent motion control and path following of multiple microrobots along arbitrary 3D trajectories. Path following in 3D with less than 310 μm mean error is shown for a set of two microrobots of size 350 μm and 1500 μm, and independent motions are shown with three microrobots. It is also shown that control of more microrobots could be possible using improved magnetic coil hardware. Microrobot diversity is analyzed with regards to the effect on independent control. The proposed addressability method could be used for the 3D control of a team of microrobots inside microfluidic channels or in the human body for localized therapy or diagnostics.},
