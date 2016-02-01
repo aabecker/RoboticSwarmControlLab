@@ -1,0 +1,61 @@
+TODOs are listed as follows (TODO: 1.)
+
+
+Reviewer 1 of IROS 2014 submission 1
+
+Comments to the author
+======================
+
+This is a very well-done paper. This group has previously
+shown that the gradients in a clinical MRI can be used to
+apply forces to a magnetic bead, and those forces can be
+converted to mechanical torques if the bead is embedded at
+the end some moment arm, and thus gradient forces can be
+used to power rotary machines inside an MRI, essentially
+creating a new type of motor. In this paper, they show that
+any number of such motors can be controlled in an
+under-actuated fashion using only the three gradient-coil
+inputs, provided that none of the motor shafts are
+parallel. The authors provide a complete analytical result,
+and well as simulations and a case-study in the design of a
+3-DOF biopsy-needle system.
+
+I commend the authors on this paper. As someone who also
+works on magnetic-manipulation systems, I get very tired of
+reviewing papers with no real contribution that advances
+the state-of-the-art in our field. This paper makes a real
+contribution, it that we now know how to do something that
+we couldn't have done before.
+
+I think the assumption that the motor shafts are not
+parallel is not restrictive in the slightest. It is
+completely reasonable for the authors to make and enforce
+such an assumption in a design, and it will not limit the
+proposed method in any appreciable way.
+
+(TODO: 1.)  One mistake I found: in equation (2), I'm pretty sure that
+the denominators should be dx, dy, dz, and that the
+numerators should all be subscript z. Am I thinking about
+this wrong? The field always points in the z direction
+within the bore, and only its magnitude varies as a
+function of position, due to the gradient coils. Hopefully
+this type didn't make its way into the remainder of the
+derivation.
+
+[[ Thank you for catching this error! Sadly, it also appears in an IJRR article (http://robotics.tch.harvard.edu/publications/pdfs/vartholomeos2013MRI.pdf) ]]
+
+(TODO: 2.) Probably the paper's only weakness is that it doesn't
+really provide good experimental data, but the attached
+video clearly shows that the method is working in some
+simple systems. Since this paper is basically ready to be
+submitted for journal publication, I assume that the
+authors will include more experimental verification there.
+
+[[True.  this will wait for the Journal version ]]
+
+
+Comments on the Video Attachment
+================================
+
+This is a well-done video, mixing simulations and physical
+experiments in an MRI.

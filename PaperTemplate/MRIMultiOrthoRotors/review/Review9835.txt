@@ -1,0 +1,42 @@
+TODOs are listed as follows (TODO: 1.)
+
+Reviewer 5 of IROS 2014 submission 1
+
+Comments to the author
+======================
+
+The paper presents a nonlinear control design for an MRI
+robot. The author design the control for multiple permanent
+magnets in the MRI controlled by a 3D gradient field.
+The control is non linear control based on min-max control
+Liapunov control function.
+The theoretical control law development is interesting and
+thorough.
+
+ (TODO: 2.)
+ The authors should be aware of the problem with
+such controllers that they cause rapid switching in the
+input which is not always applicative in the real world.The
+way to avoid this is to add a damping constant in the non
+linear control law or to use more advance non linear
+control schemes such as sliding modes.
+The paper s well written and the equations are explained
+well and demonstrated properly.
+As for the references, they are adequate. 
+
+ (TODO: 3.)
+I would also
+quote Abbott's and Menciassi's efforts in magnetically
+controlled robots. I prefer that the author will state more
+clearly their previous work in this subject. 
+All in all a very good paper, considering its scope and
+added additional experiments to it int the real world it
+can be easily published as a journal paper in addition to
+this proceedings.
+
+
+Comments on the Video Attachment
+================================
+
+The authors should consider presenting the input efforts in
+the demonstrations

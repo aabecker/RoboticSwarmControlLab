@@ -1,0 +1,281 @@
+      0 2014/01/19-20:43:24.698441      Notice  SUB     4900    MrIrisContainer MrIrisContainer.cpp:264 main    IpAdress: LOCALHOST
+      0 2014/01/19-20:43:24.699441      Notice  SUB     4900    MrIrisContainer MrIrisContainer.cpp:265 main    Port    : 8118
+      0 2014/01/19-20:43:24.699441      Notice  SUB     4900    MrIrisContainer MrIrisContainer.cpp:266 main    Priority:
+      0 2014/01/19-20:43:24.699441      Notice  SUB     4900    MrIrisContainer MrIrisContainer.cpp:267 main    Strategy:
+      0 2014/01/19-20:43:24.786446      Notice  SUB     4900    MrParc  MrParcRaidImpl.h:1909   MrParcRaidImpl::MrParcRaidImpl  MrParcRaidImpl singleton created.
+      0 2014/01/19-20:43:24.994458      Notice  SUB     4900    MrParc  MrParcMemPool.cpp:1046  MrParcMemPoolMgr::MrParcMemPoolMgr      Memory pool initialized successfully for heap allocation.
+      0 2014/01/19-20:43:25.013459      Notice  DLL     4900    IrisServices    Sender.cpp:648  GlobalSender::start     data transfer client initialized on 192.168.2.1:8002
+      0 2014/01/19-20:43:25.015459      Notice  DLL     4900    IrisServices    RAID.cpp:601    RAIDGlobal::Open        Simulation Mode - writing to raid is disabled
+ScrAdFilter: fopen successful Z:\n4\pkg\MrServers\MrVista\Simu/config/MrSCRFilter/Adkernel_002_1_4591_new.db
+      0 2014/01/19-20:43:25.036461      Notice  0       4900    UTrace.CoutCatcher      CoutCatcherImpl.cpp:261 CTraceMsgHandler::handleMessage ScrAdFilter: fopen successful Z:\n4\pkg\MrServers\MrVista
+\Simu/config/MrSCRFilter/Adkernel_002_1_4591_new.db
+      0 2014/01/19-20:43:25.050461      Notice  DLL     4900    IrisServices    HistoryLog.cpp:44   HistoryLog::start   The HistoryLog service started.
+      0 2014/01/19-20:43:25.051461      Notice  SUB     4900    MrParc  PerformanceCounter.cpp:65   Parc::PerformanceService::start     Performance Counter service startet on LOCALHOST:8015
+      0 2014/01/19-20:43:25.070463      Notice  SUB     4900    MrParc  PipeController.cpp:112  MrPipeController::MrPipeController      -------- Image Reconstruction System ready --------
+      0 2014/01/19-20:43:25.070463      Notice  SUB     4900    MrIrisContainer MrIrisContainer.cpp:281 main    Running MrParcIF server loop ...
+      0 2014/01/19-20:43:34.127981      Notice  SUB     4500    MrParc  ServerDispatcher.cpp:70 MrParcIFServerDispatcher::handleConnection      ParcIF new connection ChannID: 1.
+      1234      2014/01/19-20:43:34.166983      Notice  SUB     4444    MrParc  PipeController.cpp:171  MrPipeController::prepareMeasurement    -------- Preparing measurement uid=  1234 --------
+      1234      2014/01/19-20:43:34.175983      Debug   TRACE_4 4444    MrParc  Measurement.cpp:74  Measurement::Measurement    MrParc memory footprint:
+                                                                                                            totalSize_      = 0 (0 Mb)
+                                                                                                            protectedSize_  = 0 (0 Mb)
+                                                                                                            protectedAvail_ = 0 (0 Mb)
+                                                                                                            normalSize_     = 0 (0 Mb)
+                                                                                                            normalAvail_    = 0 (0 Mb)
+                                                                                                            poolPageSize_   = 524288 (0.5 Mb)
+      1234      2014/01/19-20:43:34.218986      Notice  DLL     4444    IceServices     FillMiniHeaderData.cpp:172      FillMiniHeaderData::start(...)  FillMiniHeaderData> MeasUID = 1234 : Protocol / S
+equence FileName / - String / IceProgram / ExamComposer: 'actuationCloseLoop1Rotor' / '%CustomerSeq%\actuationCloseLoop1Rotor' / 'se2d1' / '%CustomerIceProgs%\IceProgActuationCloseLoopV2' / ''  m_iBits
+Stored = 12
+      1234      2014/01/19-20:43:34.218986      Notice  DLL     4444    IrisServices    Sender.cpp:389  SenderSimu::start       <Simulation_Data_Path> Z:\n4\pkg\MrServers\MrVista\Ice\IceIdeaFunctors\Ic
+eActuationCloseLoopV2\
+      1234      2014/01/19-20:43:34.219986      Notice  DLL     4444    IrisServices    AsyncReader.cpp:245     AsyncReader::start      file Z:\n4\pkg\MrServers\MrVista\Ice\IceIdeaFunctors\IceActuation
+CloseLoopV2\measFB19.dat opened, size: 7562752 bytes, entry 0
+      1234      2014/01/19-20:43:34.518003      Notice  DLL     4444    MrSystemFunctors        RootFunctor.cpp:130     MR_SYSTEM_FUNCTORS::RootFunctor::EndInit        FeedbackRoot> ICE CONFIG_MASK set
+ to 0x8000
+      1234      2014/01/19-20:43:34.520003      Notice  SUB     4444    MrParc  PipeController.cpp:312  MrPipeController::prepareMeasurementRecon       -------- Preparing Recon measurement uid=  1234 -
+-------
+      1234      2014/01/19-20:43:34.521003      Notice  DLL     4444    IrisServices    RAID.cpp:765    RaidStat::notify        measurement 1234 state changed: Startup -> Passthrough
+      1234      2014/01/19-20:43:34.524003      Notice  DLL     4444    MrSystemFunctors        RootFunctor.cpp:130     MR_SYSTEM_FUNCTORS::RootFunctor::EndInit        RootFunctor> ICE CONFIG_MASK set
+to 0x8000
+      1234      2014/01/19-20:43:34.524003      Notice  SUB     4444    MrParc  PipeController.cpp:354  MrPipeController::prepareMeasurementRecon       -------- Preparation Recon successful measurement
+ uid=  1234 --------
+      1234      2014/01/19-20:43:34.524003      Notice  SUB     4444    MrParc  PipeController.cpp:359  MrPipeController::prepareMeasurementRecon          424.57 ms Time for EntirePreparation
+      1234      2014/01/19-20:43:34.525003      Warn    SUB     4444    MrParc  ServerDispatcher.cpp:267        MrParcIFServerDispatcher::notifyNls     Warning sending notifyNls to client (0x364942432c
+000005). Possible connection broken, trying later.
+      1234      2014/01/19-20:43:34.525003      Notice  SUB     4444    MrParc  PipeController.cpp:285  MrPipeController::prepareMeasurement    -------- Preparation successful measurement uid=  1234 --
+------
+      1234      2014/01/19-20:43:34.529004      Notice  DLL     2280    IrisServices    RAID.cpp:765    RaidStat::notify        measurement 1234 state changed: Passthrough -> Passthrough-Started
+      1234      2014/01/19-20:43:34.529004      Notice  DLL     2280    IrisServices    RAID.cpp:182    RAIDLocal::AcqStarted   acquisition started for protocol "actuationCloseLoop1Rotor", Raid File Id
+ 0
+      1234      2014/01/19-20:43:34.531004      Notice  DLL     2280    ReadoutChecker  ReadoutChecker.cpp:155  IReadoutCheckerImpl::CheckMeasId        Meas Id check disabled
+      1234      2014/01/19-20:43:34.531004      Notice  DLL     2280    MrSystemFunctors        RootFunctor.cpp:362     RootFunctor::getRawData()       FeedbackRoot> FirstScanInMeas :  EvalInfoMask1=0x
+     402: RCF|FP0| I: scan=1 clin=0 ceco=0 cslc=0 cacq=0 cpar=0 cseg=0 cset=0 cphs=0 crep=0 cida=0 cidb=0 cidc=0 cidd=0 cide=0 NCol=512 NCha=12
+      1234      2014/01/19-20:43:34.533004      Notice  DLL     2280    MrSystemFunctors        RootFunctor.cpp:229     RootFunctor::FirstCall()        FeedbackRoot>  m_ImaDimBoundaries =  --- IceLoopC
+ounters dump ---
+                                                                                                                         _ccol = 512
+                                                                                                                         _clin = 256
+                                                                                                                         _ccha = 12
+                                                                                                                         _cset = 1
+                                                                                                                         _ceco = 1
+                                                                                                                         _cphs = 1
+                                                                                                                         _crep = 1
+                                                                                                                         _cpar = 1
+                                                                                                                         _cseg = 1
+                                                                                                                         _cslc = 1
+                                                                                                                         _cida = 1
+                                                                                                                         _cidb = 1
+                                                                                                                         _cidc = 1
+                                                                                                                         _cidd = 1
+                                                                                                                         _cide = 1
+                                                                                                                         _cave = 1
+
+      1234      2014/01/19-20:43:34.579006      Notice  DLL     2280    IrisFunctors    SourceFunctor.cpp:598   SourceFunctor::SendAcqStart     sending acquisition start message...
+      1234      2014/01/19-20:43:34.579006      Notice  DLL     2280    IrisFunctors    SourceFunctor.cpp:607   SourceFunctor::SendAcqStart     succeeded sending acquisition start message
+      1234      2014/01/19-20:43:34.579006      Notice  DLL     2556    ReadoutChecker  ReadoutChecker.cpp:155  IReadoutCheckerImpl::CheckMeasId        Meas Id check disabled
+      1234      2014/01/19-20:43:34.581007      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {1, 154.688, 156.445}
+      1234      2014/01/19-20:43:34.592007      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {3, 157.031, 151.172}
+      1234      2014/01/19-20:43:34.600008      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {5, 155.859, 147.656}
+      1234      2014/01/19-20:43:34.609008      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {7, 154.102, 145.313}
+      1234      2014/01/19-20:43:34.613008      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {9, 147.07, 144.141}
+      1234      2014/01/19-20:43:34.622009      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {11, 144.727, 145.313}
+      1234      2014/01/19-20:43:34.636010      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {13, 141.797, 147.656}
+      1234      2014/01/19-20:43:34.644010      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {15, 141.211, 150.586}
+      1234      2014/01/19-20:43:34.655011      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {17, 141.797, 154.688}
+      1234      2014/01/19-20:43:34.661011      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {19, 144.727, 158.203}
+      1234      2014/01/19-20:43:34.669012      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {21, 155.859, 155.859}
+      1234      2014/01/19-20:43:34.674012      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {23, 148.828, 143.555}
+      1234      2014/01/19-20:43:34.678012      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {25, 145.898, 144.141}
+      1234      2014/01/19-20:43:34.682012      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {27, 143.555, 145.898}
+      1234      2014/01/19-20:43:34.690013      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {29, 141.797, 148.828}
+      1234      2014/01/19-20:43:34.694013      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {31, 141.211, 152.93}
+      1234      2014/01/19-20:43:34.698013      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {33, 142.969, 156.445}
+      1234      2014/01/19-20:43:34.706014      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {35, 147.07, 158.789}
+      1234      2014/01/19-20:43:34.711014      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {37, 154.688, 157.031}
+      1234      2014/01/19-20:43:34.717014      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {39, 152.344, 144.727}
+      1234      2014/01/19-20:43:34.725015      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:255   ActuationCloseLoop::ComputeScan i, pX, pY {41, 147.656, 144.141}
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 CircleFit.cpp:154   CircleFit::circleFitByTaubin    Newton-Taubin negative root:  x=
+                                                                                                                                 -0.640076
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:267   ActuationCloseLoop::ComputeScan *********** Circle Found ********
+******
+      1234      2014/01/19-20:43:34.726015      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:268   ActuationCloseLoop::ComputeScan cx, cy, r {149.026, 151.519, 8.00
+665}
+      1234      2014/01/19-20:43:34.734015      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {43, 144.727, 144.727}
+      1234      2014/01/19-20:43:34.734015      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.13513 }
+      1234      2014/01/19-20:43:34.743016      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {45, 145.313, 144.727}
+      1234      2014/01/19-20:43:34.744016      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.07113 }
+      1234      2014/01/19-20:43:34.748016      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {47, 144.141, 144.727}
+      1234      2014/01/19-20:43:34.748016      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.19433 }
+      1234      2014/01/19-20:43:34.758017      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {49, 144.727, 144.727}
+      1234      2014/01/19-20:43:34.758017      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.13513 }
+      1234      2014/01/19-20:43:34.764017      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {51, 144.141, 144.727}
+      1234      2014/01/19-20:43:34.764017      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.19433 }
+      1234      2014/01/19-20:43:34.773018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {53, 144.141, 144.727}
+      1234      2014/01/19-20:43:34.773018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.19433 }
+      1234      2014/01/19-20:43:34.777018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {55, 144.141, 144.727}
+      1234      2014/01/19-20:43:34.777018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.19433 }
+      1234      2014/01/19-20:43:34.782018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {57, 144.141, 144.727}
+      1234      2014/01/19-20:43:34.782018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.19433 }
+      1234      2014/01/19-20:43:34.790018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {59, 144.727, 144.727}
+      1234      2014/01/19-20:43:34.790018      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.13513 }
+      1234      2014/01/19-20:43:34.795019      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {61, 144.727, 144.141}
+      1234      2014/01/19-20:43:34.795019      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.09842 }
+      1234      2014/01/19-20:43:34.800019      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {63, 144.727, 144.727}
+      1234      2014/01/19-20:43:34.800019      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.13513 }
+      1234      2014/01/19-20:43:34.808020      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {65, 144.141, 144.727}
+      1234      2014/01/19-20:43:34.808020      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.19433 }
+      1234      2014/01/19-20:43:34.812020      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {67, 144.141, 145.313}
+      1234      2014/01/19-20:43:34.812020      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.23766 }
+      1234      2014/01/19-20:43:34.821020      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {69, 144.141, 145.313}
+      1234      2014/01/19-20:43:34.821020      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.23766 }
+      1234      2014/01/19-20:43:34.826021      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {71, 144.141, 144.727}
+      1234      2014/01/19-20:43:34.826021      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.19433 }
+      1234      2014/01/19-20:43:34.831021      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {73, 144.727, 144.727}
+      1234      2014/01/19-20:43:34.832021      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -2.13513 }
+      1234      2014/01/19-20:43:34.841021      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {75, 181.055, 144.727}
+      1234      2014/01/19-20:43:34.841021      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -0.208982 }
+      1234      2014/01/19-20:43:34.845022      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {77, 158.789, 138.281}
+      1234      2014/01/19-20:43:34.845022      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -0.935348 }
+      1234      2014/01/19-20:43:34.855022      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {79, 176.953, 144.727}
+      1234      2014/01/19-20:43:34.855022      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -0.238593 }
+      1234      2014/01/19-20:43:34.859022      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {81, 176.953, 144.727}
+      1234      2014/01/19-20:43:34.860022      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { -0.238593 }
+      1234      2014/01/19-20:43:34.865023      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {83, 179.297, 155.273}
+      1234      2014/01/19-20:43:34.865023      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 0.123396 }
+      1234      2014/01/19-20:43:34.874023      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {85, 183.984, 160.547}
+      1234      2014/01/19-20:43:34.874023      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 0.252724 }
+      1234      2014/01/19-20:43:34.878024      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {87, 181.641, 159.375}
+      1234      2014/01/19-20:43:34.878024      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 0.23637 }
+      1234      2014/01/19-20:43:34.886024      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {89, 181.055, 158.789}
+      1234      2014/01/19-20:43:34.887024      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 0.223203 }
+      1234      2014/01/19-20:43:34.892024      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {91, 178.711, 158.203}
+      1234      2014/01/19-20:43:34.892024      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 0.221474 }
+      1234      2014/01/19-20:43:34.897025      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {93, 178.125, 157.031}
+      1234      2014/01/19-20:43:34.897025      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 0.187211 }
+      1234      2014/01/19-20:43:34.907025      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {95, 178.125, 158.203}
+      1234      2014/01/19-20:43:34.907025      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 0.225785 }
+      1234      2014/01/19-20:43:34.912025      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {97, 144.141, 157.617}
+      1234      2014/01/19-20:43:34.912025      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.24625 }
+      1234      2014/01/19-20:43:34.918026      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {99, 144.141, 157.617}
+      1234      2014/01/19-20:43:34.919026      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.24625 }
+      1234      2014/01/19-20:43:34.926026      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {101, 144.141, 157.617}
+
+      1234      2014/01/19-20:43:34.926026      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.24625 }
+      1234      2014/01/19-20:43:34.930027      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {103, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:34.930027      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:34.940027      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {105, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:34.940027      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:34.944027      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {107, 142.969, 156.445}
+
+      1234      2014/01/19-20:43:34.944027      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.45883 }
+      1234      2014/01/19-20:43:34.951028      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {109, 142.969, 157.617}
+
+      1234      2014/01/19-20:43:34.951028      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.35285 }
+      1234      2014/01/19-20:43:34.959028      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {111, 142.969, 157.617}
+
+      1234      2014/01/19-20:43:34.959028      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.35285 }
+      1234      2014/01/19-20:43:34.964028      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {113, 143.555, 157.617}
+
+      1234      2014/01/19-20:43:34.965029      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.30209 }
+      1234      2014/01/19-20:43:34.975029      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {115, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:34.975029      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:34.979029      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {117, 142.969, 156.445}
+
+      1234      2014/01/19-20:43:34.979029      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.45883 }
+      1234      2014/01/19-20:43:34.985030      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {119, 142.969, 157.617}
+
+      1234      2014/01/19-20:43:34.985030      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.35285 }
+      1234      2014/01/19-20:43:34.991030      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {121, 142.969, 157.617}
+
+      1234      2014/01/19-20:43:34.992030      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.35285 }
+      1234      2014/01/19-20:43:34.997030      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {123, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:34.997030      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:35.007031      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {125, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:35.007031      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:35.011031      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {127, 142.969, 156.445}
+
+      1234      2014/01/19-20:43:35.011031      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.45883 }
+      1234      2014/01/19-20:43:35.018032      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {129, 144.141, 157.617}
+
+      1234      2014/01/19-20:43:35.018032      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.24625 }
+      1234      2014/01/19-20:43:35.025032      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {131, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:35.025032      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:35.030032      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {133, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:35.031032      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:35.040033      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {135, 142.969, 157.031}
+
+      1234      2014/01/19-20:43:35.040033      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.4033 }
+      1234      2014/01/19-20:43:35.044033      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {137, 142.969, 157.617}
+
+      1234      2014/01/19-20:43:35.044033      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.35285 }
+      1234      2014/01/19-20:43:35.050033      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:297   ActuationCloseLoop::ComputeScan i, pX, pY {139, 142.969, 157.617}
+
+      1234      2014/01/19-20:43:35.050033      Notice  DLL     2280    IceProgActuationCloseLoopV2 IceProgActuationCloseLoop.cpp:298   ActuationCloseLoop::ComputeScan thetaMeas { 2.35285 }
+      1234      2014/01/19-20:43:35.057034      Notice  DLL     2280    IrisFunctors    SourceFunctor.cpp:714   SourceFunctor::LogDataRate      acquisition data rate: 10.4 MB / s
+      1234      2014/01/19-20:43:35.057034      Notice  DLL     2280    IrisFunctors    SourceFunctor.cpp:761   SourceFunctor::endOfJob 140 feedback readouts received
+      1234      2014/01/19-20:43:35.057034      Notice  SUB     2280    MrParc  PipeLinkService.cpp:757 PipeLinkServiceDownStreamHandler::data  PipeLinkService:acquisition ACQ_END->Routing
+      1234      2014/01/19-20:43:35.057034      Notice  DLL     2556    IrisServices    RAID.cpp:765    RaidStat::notify        measurement 1234 state changed: Passthrough-Started -> Ready
+      1234      2014/01/19-20:43:35.057034      Notice  SUB     2556    MrParc  PipeLinkService.cpp:535 PipeLinkServiceDownStreamHandler::data  PipeLinkService:Online1 ACQ_END->shutdownThreads
+      1234      2014/01/19-20:43:35.057034      Notice  SUB     896     MrParc  Measurement.cpp:181 Measurement::notifyState       654.48 ms Time for EntireAcquisition
+      1234      2014/01/19-20:43:35.057034      Notice  SUB     4136    MrParc  PipeLinkService.cpp:535 PipeLinkServiceDownStreamHandler::data  PipeLinkService:SystemFunctors_ps ACQ_END->shutdownThread
+s
+      1234      2014/01/19-20:43:35.058034      Notice  SUB     4696    MrParc  PipeLinkService.cpp:535 PipeLinkServiceDownStreamHandler::data  PipeLinkService:Root_ps ACQ_END->shutdownThreads
+      1234      2014/01/19-20:43:35.058034      Notice  Trace_PDS       896     MrParc  PDSGlobalService.cpp:774        PDSGlobalService::RemoveSpaces  Removed PDS entries for MeasUid : MeasUid_1234
+      1234      2014/01/19-20:43:35.058034      Notice  SUB     496     MrParc  PipeGarbageCollector.cpp:131    PipeGarbageCollector::svc       Delete measurement MeasUid: 1234 ...
+      1234      2014/01/19-20:43:35.058034      Notice  SUB     896     MrParc  Measurement.cpp:205 Measurement::notifyState          765 us Time for EntireReconstruction
+      1234      2014/01/19-20:43:35.058034      Notice  SUB     896     MrParc  Measurement.cpp:211 Measurement::notifyState    GPU calls: 0
+      1234      2014/01/19-20:43:35.058034      Notice  SUB     896     MrParc  Measurement.cpp:232 Measurement::notifyState    -------- Image Reconstruction done  MeasUid=  1234 --------
+      1234      2014/01/19-20:43:35.058034      Notice  DLL     496     IrisServices    Sender.cpp:418  SenderSimu::stop        sender service closed
+      0 2014/01/19-20:43:35.147039      Notice  SUB     4500    MrParc  ServerDispatcher.cpp:64 MrParcIFServerDispatcher::handleConnection      ParcIF Connection broken ChannID: 1.
+      1234      2014/01/19-20:43:35.161040      Debug   TRACE_1 496     IceServices     FillMiniHeaderData.cpp:150      FillMiniHeaderData::~FillMiniHeaderData FMHD: MrParc memory footprint:
+                                                                                                                                        FMHD: totalSize_      = 0 (0 Mb)
+                                                                                                                                        FMHD: protectedSize_  = 0 (0 Mb)
+                                                                                                                                        FMHD: protectedAvail_ = 0 (0 Mb)
+                                                                                                                                        FMHD: normalSize_     = 0 (0 Mb)
+                                                                                                                                        FMHD: normalAvail_    = 0 (0 Mb)
+                                                                                                                                        FMHD: poolPageSize_   = 524288 (0.5 Mb)
+                                                                                                                                        FMHD: fallBackCnt_    = 0
+                                                                                                                                        FMHD: protectedPeak_  = 0 (0 Mb)
+                                                                                                                                        FMHD: normalPeak_     = 96666196 (92.1881 Mb)
+      1234      2014/01/19-20:43:35.180041      Notice  SUB     496     MrParc  PipeGarbageCollector.cpp:138    PipeGarbageCollector::svc       ... Measurement MeasUid: 1234 deleted

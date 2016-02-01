@@ -1,0 +1,36 @@
+\section{Introduction}\label{sec:Intro}
+
+Robotics offers important contributions to image-guided, minimally invasive surgery.  
+Among imaging techniques,  MRI has several advantages.  MRI provides high resolution soft-tissue imaging and does not use ionizing radiation. 
+%
+%\todo{
+%MRI-compatible robotics:  eight DOF  pneumatically actuated robot for aortic valve replacement \cite{li2011pneumatic}
+%Minimally-invasive, MRI-compatible trunk robots actuated with shape memory alloy  wires for inter-cranial tumor resection \cite{Ho2012TRO}. %Jaydev Desai
+%See \cite{fischer2008mri} for an overview of MRI-compatible actuation techniques.
+%}
+
+% Magnetically actuated robotics includes work by 
+
+ MR image-guided procedures, however, pose several challenges for robotics\cite{Ho2012TRO,fischer2008mri,Martel2007,vartholomeos2011mripowered,vartholomeos2013mri}.  First, all ferrous materials create imaging artifacts.  Ferrous materials must be isolated from the imaging region of interest.  Moreover, the magnetic fields used in an MRI induce forces on any ferrous materials in the robot and turn these materials into strong magnetic dipoles that exert forces on each other.   MRI gradients induce current in any conducting materials, which can generate dangerous amounts of heat and also exert forces. 
+ 
+Despite these challenges, there are a number of recent innovations demonstrating tetherless and inexpensive actuation imaged, powered, and controlled using MRI.   Martel et al.\ demonstrated in vivo motion control of a mm-scale particle in the carotid artery of swine \cite{Martel2007}. Vartholomeos et al.~designed a single-DOF MRI-powered actuator for use as a tetherless biopsy robot \cite{vartholomeos2011mripowered}.  This was extended to closed-loop control of a single rotor in~\cite{vartholomeos2013mri}. Since such results require only scanner software and inexpensive actuator components, dissemination of MRI-based robotic technology has the potential to be rapid and inexpensive.
+
+While this prior work has demonstrated control of a single particle or a single rotor, many clinical applications require multiple DOF. This is a challenge because the three orthogonal magnetic gradients of MRI scanners are applied over the entire scanner bore, so the resulting control problem is underactuated. Techniques from nonlinear control theory must be used to demonstrate controllability and to derive control laws.
+
+The contribution of this paper is to develop control techniques enabling independent control of large numbers of rotors. Section \ref{sec:controlLaw} describes an MRI actuator model and a multi-rotor control law.  Section \ref{sec:analysis} examines multi-actuator system optimization.   Section \ref{sec:experiment} applies these principles to design a 3 DOF biopsy robot (Fig.~\ref{fig:3orthogonalRotors}), and  Section \ref{sec:conclusion} ends with concluding remarks.
+  
+  
+ 
+   \begin{figure}
+\begin{overpic}[width = \columnwidth]{MRIandRobotBiopsys}
+\put(8,-4){(a) MRI scanner}
+\put(48,-4){(b) 3 independent actuators}
+\end{overpic}
+\vspace{-.9em}
+\caption{
+\label{fig:3orthogonalRotors}
+This paper proves that $n$ non-parallel rotors can be independently actuated by the same magnetic gradient field. The torque from these rotors could power multi-DOF robotic actuators running untethered inside an MRI bore  such as (b), a biopsy robot inspired by~\cite{Walsh2010} that can insert a needle and tilt the needle to a two DOF compound angle.
+\vspace{-2.2em}
+}
+\end{figure}
+

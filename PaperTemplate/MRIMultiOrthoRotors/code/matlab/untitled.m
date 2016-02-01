@@ -1,0 +1,1 @@
+% Anmiate 40% power for movie

@@ -1,0 +1,100 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Case Study: A Three-Axis Biopsy Robot}\label{sec:experiment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+To study the preceding topics in the context of a practical example system, a three-axis biopsy robot powered by DC motors is considered~\cite{Walsh2010}.  Figure \ref{fig:3orthogonalRotors} is a schematic of the proposed system.  The system has a fixed base that is attached to the patient.   Two actuators, $\theta_x$ and $\theta_y$, control orthogonal axes of a nested spherical yoke.  A carriage rides along the intersection of this yoke.  Mounted on this carriage is a third actuator, $\theta_{needle}$,  that can insert a needle through a pivot point at the center of the base.  The original design allows $\theta_x$ and $\theta_y$ to rotate between $[-\pi/6,\pi/6]$, and inserts $\theta_{needle}$ from [0,100]mm, resulting in a  spherical quadrilateral workspace with volume $(\theta_{needle})^3\pi/9$.  The base has diameter 100m, and the nested yokes have radii 50mm.
+
+% describe the physical setup
+
+% how we address the issues in section \label{sec:analysis}
+
+\setcounter{paragraph}{0}
+\paragraph{Maximizing Torque}
+The rotors attached to the spherical yokes are subject to a torque due to gravity, $\tau_{mass}$, and a needle-depth dependent torque, $\tau_{needle}$, as well as the frictional torques in \eqref{eq:rotorDynamics}.
+\begin{align}
+\tau_{mass} &= m  g  \ell  \sin(\theta_i) &\mathrm{[Nmm]} \nonumber \\
+\tau_{needle} &= \theta_{needle} \frac{60}{100} &\mathrm{[Nmm]} 
+\end{align}
+The lumped mass $g$ of the carriage and needle actuator is 0.1kg and the yoke radius $\ell$=50mm~\cite{Walsh2010}.  The frictional losses in the gear train are represented by $\eta_e \in[0,1]$, a dimensionless parameter for motor efficiency.  
+
+The two yoke actuators require 100Nmm of torque and the needle actuator requires 50Nmm of torque.  Assuming a conservative $\eta_e=0.5$, with a gear reduction ratio $G$, the motor torque is
+\begin{align}
+\tau_{motor}  =  \eta_\tau  \eta_e G r_i \frac{4}{3} \pi r_{sphere}^3 M_{sz} g_{M}  . \label{eq:RotorForceGear}
+\end{align}
+Here $\eta_\tau$ is the average torque per rotor for $n=3$ rotors, which was evaluated as $\approx$0.81 in  Section \ref{subsec:TorqueFuncN}. 
+Using a rotor radius of $r_i$=20mm and a sphere radius $r_{sphere}$=6mm, the yoke actuators require a gear reduction of $G_{xy}$=250, and the needle actuator requires $G_{n}$=125. 
+
+
+
+\paragraph{Minimize Actuator Interaction Forces}
+ \begin{figure}
+\begin{overpic}[height = .44\columnwidth]{NeedleSteering3DdipoleH}
+\put(3,55){\color{ForestGreen} $\theta_{needle}$}
+\put(77,16){\color{red} $\theta_{x}$}
+\put(60,65){\color{blue} $\theta_{y}$}
+\put(36,27){ \rotatebox{-18}{ $\underbrace{ ~~\qquad}_{\text{axial offset}}$}}
+\end{overpic}
+\hspace{1em}
+\begin{overpic}[height = .48\columnwidth]{NeedleSteering3DdipoleV}
+\put(30,90){\color{ForestGreen} $\theta_{needle}$}
+\put(60,18){\color{red} $\theta_{x}$}
+\put(50,60){\color{blue} $\theta_{y}$}
+\end{overpic}
+\vspace{-1em}
+\caption{
+\label{fig:NeedleSteeringDipole}Candidate designs and dipole-interaction. Spheres represent minimum separation constraint. The design at right violates the constraint.}
+\vspace{-1em}
+\end{figure}
+The ferrous spheres must be separated to minimize dipole-dipole forces, as described in Section \ref{subsec:minimumseparation}. According to \eqref{eq:dipoledipolePercentGrad}, to limit dipole-dipole forces to less than 10\% of maximum gradient forces with 6mm radius ferrous spheres requires at least 116mm spacing. Several candidate designs are shown in Fig.~\ref{fig:NeedleSteeringDipole}.  Orienting the needle actuator along the [-1,-1,0] axis resulted in the smallest form factor, with an axial offset of 75mm on each rotor.
+
+
+
+
+\paragraph{Simultaneous Rotor Tracking}
+ \begin{figure}
+\begin{overpic}[height = .48\columnwidth]{NeedleSteeringScanPlane2.png}
+\put(75,38){$p_1$} 
+\put(35,80){$p_2$}
+\small
+\put(35,-8){scan plane}
+\end{overpic}
+\begin{overpic}[height = .48\columnwidth]{MarkerProjections.pdf}
+\put(72,0){$p_1$} 
+\put(0,75){$p_2$}
+\small
+\put(8,-8){$\theta_i$ projections onto scan plane}
+\end{overpic}
+\vspace{.1em}
+\caption{
+\label{fig:MarkerProjections}All three rotors can be localized with two orthogonal line scans. These line scans can be selected such that the ellipses parameterized by $\theta_i$ are disjoint for all configurations $[\theta_x,\theta_y]$.}
+\vspace{-1em}
+\end{figure}
+ For fast real-time control, the rotors must be arranged to minimize the number of line scans needed to localize the markers, as described in Section \ref{subsec:FeedbackSensing}. If the markers are placed 25mm axially inward from the ferrous spheres, then the position of each rotor can be detected with just two line scans, as shown in Fig.~\ref{fig:MarkerProjections}.  The projections along $p_1$=[-1,2,2] and $p_2$=[2,-1,2] are orthogonal, and result in ellipses for all values of $[\theta_x,\theta_y] \in [-\pi/6,\pi/6]$.  Moreover, the projections for the three rotors are disjoint in both $p_1$ and $p_2$. 
+
+
+
+ \paragraph{Simulation}
+ \begin{figure}
+ \vspace{-2.5em}
+\begin{overpic}[width = \columnwidth]{ThreeAxisNeedleInsertion.pdf}
+\put(60,55){\color{blue} Lyapunov function}
+\put(29,10){\color{ForestGreen} $G_{n}\theta_{needle}$}
+\put(19,16){\color{red} $G_{xy}\theta_{x}$}
+\put(27,28){\color{blue} $G_{xy}\theta_{y}$}
+\end{overpic}
+\vspace{-2em}
+\caption{
+\label{fig:ThreeAxisNeedleInsertion}
+Simulation with a three-rotor biopsy robot: moving the carriage to full extent $[\theta_x,\theta_y] = [-\pi/6,\pi/6]$, inserting the needle 100 mm, then retracting the needle and finally returning to $[\theta_x,\theta_y] = [0,0]$.}
+%\vspace{-1em}
+\end{figure}
+
+ The biopsy robot design was simulated with an input sequence comprised of four step-input commands: 1) move the carriage to full extent $[\theta_x,\theta_y] = [-\pi/6,\pi/6]$, 2.) insert the needle 100 mm, 3.) retract the needle 4.)  return to $[\theta_x,\theta_y] = [0,0]$.   Fig.~\ref{fig:ThreeAxisNeedleInsertion} shows the sum squared error and position traces during these four movements.  The system response for all steps is smooth.
+ 
+
+
+
+
+

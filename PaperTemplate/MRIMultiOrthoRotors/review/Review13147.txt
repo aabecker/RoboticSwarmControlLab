@@ -1,0 +1,53 @@
+TODOs are listed as follows (TODO: 1.)
+
+Reviewer 6 of IROS 2014 submission 1
+
+Comments to the author
+======================
+
+This paper is about a new idea of motor that uses MRI's
+magnetic fields. The paper's novelty are 1) proposal of new
+control method to selectively rotate more than 3 motors
+with considering interference between motors, 2) estimation
+of performance, controllability, design consideration. The
+principle of actuation has been published in previous
+works. 
+
+Reading this paper was interesting, although the work is
+yet in an early stage. It will be necessary to carefully
+examine if this idea works in a scanner as well as
+maintains the imaging quality. 
+
+
+ (TODO: 4.)
+In practice, the following
+may be the technical issues;
+1) the linearity of the gradient field out of the imaging
+volume won't be good,
+2) you'll need to implement brakes to stay the actuators
+when it's imaging,
+3) effect of mechanical margins vs. singularities (below)
+4) efficiency (if it can work quick enough).
+
+
+ (TODO: 5.)
+My concern is the singularity. As in Fig. 3, you can
+selectively rotate one motor. But the other two may be in
+the unstable condition - minor mechanical margin or minor
+noise in gradient field may appear as sudden actuation. 
+
+
+ (TODO: 6.)
+And, I am really, really willing to see the demo video that
+many motors are controlled independently and selectively.
+Up to three motors in cartecian configuration is already
+great. The current video demo has two possible
+improvements, 1) show motors are selectively moving and
+stopping, 2) rotation is smooth (currently, rotation rate
+seems not flat).
+
+Comments on the Video Attachment
+================================
+
+I am willing to see how different motors are controlled
+selectively, independently.

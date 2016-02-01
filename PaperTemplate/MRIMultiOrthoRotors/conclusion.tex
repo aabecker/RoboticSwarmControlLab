@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}\label{sec:conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    
+MRI-based multi-rotor control poses both control-theoretic challenges and practical implementation issues. To address these, this paper has provided an optimization scheme for rotor placement and derived a globally asymptotically stabilizing controller for $n$ actuators.  Both a velocity controller \eqref{eq:velocityControlPolicyInv} and a position controller \eqref{eq:positioncontrol} were implemented.  \href{http://www.mathworks.com/matlabcentral/fileexchange/45331}{{\sc Matlab} implementations of these controllers are available at} \cite{Becker2014b}.
+
+    
+These controllers exploit inhomogeneities in rotor axis orientation.  Constructing motors with axes that are not parallel requires careful balancing of the rotor shafts.  However, it is not necessary for the rotors to be non-parallel. Ongoing research indicates that the proposed control law can also stabilize parallel rotor shafts using other inhomogeneities, e.g.~$r_i, \theta_i(0), v_i$.  If all axles are parallel to the gravity vector, gravity no longer interferes with rotor movement.  This makes counterweights unnecessary, and allows using extremely low-friction jewel bearings since axles are not under radial load.
+
+
+% PIERRE: Please don't include here. Better to put this earlier as a concrete design example that considers multiple rotors and separation distance.
+% Finally, the methods presented in this paper enable simultaneous control of multiple MRI-powered motors.  We are inspired by the three-axis needle driving robot of Walsh \cite{Walsh2010}, designed to be used with CT scanners.  A similar system, with three MRI-powered actuators, could provide low-cost robotic image-guided biopsy inside the MRI bore.
+ 
+
+% PIERRE: "Please omit. "
+%   Many challenges remain.  
+%    Our control scheme requires accurate state estimation.  One technique is to use MRI fiducials mounted on the rotor shaft to measure the current $\theta_i$ angle of each rotor, as in \cite{Bergeles2013}.   Fast tracking sequences introduce a non-trivial data-association problem, which we partially addressed in Sec. \ref{subsec:FeedbackSensing}.
+%    Unfortunately the MRI cannot sense and actuate simultaneously, so this method requires time-multiplexing between sensing and actuation.  Each sensing cycle requires 26 ms, so even a low sensing rate of 10 Hz requires 1/4 of the duty cycle, during which the motor does not produce torque.  Such low sensing rates make reliable angular velocity estimation infeasible. A more promising avenue is to use an external camera and a fiducial attached to the rotor, as in [CITE].  A commercial camera with a large lens can be placed safely far from the MRI bore and measure the current rotor position with low latencies. The system would remain tetherless, MR-safe, and avoids injecting MR artifacts, but requires an unobstructed view of the motors. We are investigating methods to share camera data with the MRI control computer. 

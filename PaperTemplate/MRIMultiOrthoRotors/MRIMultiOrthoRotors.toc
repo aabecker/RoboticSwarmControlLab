@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {I}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {II}Multi-Rotor Control}{2}{section.2}
+\contentsline {subsection}{\numberline {II-A}Open-Loop Multi-Actuator Control}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {II-B}Closed-Loop Multi-Actuator Velocity Control }{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {II-C}Closed-Loop Multi-Actuator Position Control}{4}{subsection.2.3}
+\contentsline {section}{\numberline {III}Multi-Actuator Design Constraints}{4}{section.3}
+\contentsline {subsection}{\numberline {III-A}Actuator Interaction Forces}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {III-B}Simultaneous Tracking of Multiple Rotors}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {III-C}Optimal Geometric Arrangement of $n$ Rotors}{5}{subsection.3.3}
+\contentsline {subsection}{\numberline {III-D}Stall Torque versus Number of Actuators}{6}{subsection.3.4}
+\contentsline {paragraph}{\numberline {III-D.0.a}Single rotor}{6}{paragraph.3.4.0.1}
+\contentsline {paragraph}{\numberline {III-D.0.b}Two rotors}{7}{paragraph.3.4.0.2}
+\contentsline {paragraph}{\numberline {III-D.0.c}Three rotors}{7}{paragraph.3.4.0.3}
+\contentsline {paragraph}{\numberline {III-D.0.d}$n$ rotors}{7}{paragraph.3.4.0.4}
+\contentsline {section}{\numberline {IV}Case Study: A 3-axis Biopsy Robot}{7}{section.4}
+\contentsline {subsection}{\numberline {IV-A}Maximizing Torque}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {IV-B}Minimize Actuator Interaction Forces}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {IV-C}Simultaneous Rotor Tracking}{8}{subsection.4.3}
+\contentsline {subsection}{\numberline {IV-D}Simulation}{8}{subsection.4.4}
+\contentsline {section}{\numberline {V}Conclusion}{8}{section.5}
+\contentsline {section}{References}{9}{section*.3}

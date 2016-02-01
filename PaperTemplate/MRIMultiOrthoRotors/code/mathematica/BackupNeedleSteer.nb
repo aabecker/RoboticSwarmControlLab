@@ -1,0 +1,868 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     39931,        859]
+NotebookOptionsPosition[     39597,        842]
+NotebookOutlinePosition[     39952,        858]
+CellTagsIndexPosition[     39909,        855]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"maxAngle", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"30", "/", "180"}], " ", "\[Pi]"}]}], ";", " ", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"page", " ", "93"}], ",", " ", 
+     RowBox[{"the", " ", "capture", " ", "volume", " ", "is", " ", 
+      RowBox[{"\[Pi]", "/", "9"}]}], ",", " ", 
+     RowBox[{"or", " ", 
+      RowBox[{"1", "/", "12"}], " ", "the", " ", "volume", " ", "of", " ", 
+      "a", " ", 
+      RowBox[{"sphere", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"units", " ", "in", " ", "mm"}], "*)"}], 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"hoopRad", " ", "=", " ", "50"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"carriageWidthHalf", " ", "=", "2"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"baseHingeHeight", " ", "=", " ", "8"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"CarriageThicknessHalf", " ", "=", " ", "2"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"bracketThick", " ", "=", " ", "2"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"MinSeparation", " ", "=", " ", 
+          RowBox[{
+           RowBox[{"1000", "*", 
+            RowBox[{"0.11641453227603929`", "/", "2"}]}], " ", "+", " ", 
+           "20"}]}], " ", 
+         RowBox[{"(*", 
+          RowBox[{
+          "add", " ", "in", " ", "the", " ", "radius", " ", "of", " ", "the", 
+           " ", "rotor"}], "*)"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"xyzNorm", " ", "=", " ", 
+          SqrtBox[
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{"Cos", "[", "\[Theta]x", "]"}], "2"], "+", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cos", "[", "\[Theta]y", "]"}], "2"], " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]x", "]"}], "2"]}]}]]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"x", "=", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Theta]x", "]"}], " ", 
+           RowBox[{"Sin", "[", "\[Theta]y", "]"}]}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"y", "=", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"Cos", "[", "\[Theta]y", "]"}]}], " ", 
+           RowBox[{"Sin", "[", "\[Theta]x", "]"}]}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"z", "=", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[Theta]x", "]"}], " ", 
+           RowBox[{"Cos", "[", "\[Theta]y", "]"}]}]}], ",", 
+         "\[IndentingNewLine]", "scanRot", ",", "\[IndentingNewLine]", 
+         "tipAng"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "}"}], ",",
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"Graphics3D", "[", 
+        RowBox[{
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{"(*", "base", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"White", ",", "\[IndentingNewLine]", 
+           RowBox[{"Cylinder", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0", ",", 
+                 RowBox[{
+                  RowBox[{"-", "baseHingeHeight"}], "-", "3"}]}], "}"}], ",", 
+               
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0", ",", 
+                 RowBox[{"-", "baseHingeHeight"}]}], "}"}]}], "}"}], ",", 
+             "hoopRad"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", "bracket", "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"Cuboid", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "hoopRad"}], "-", "bracketThick"}], ",", 
+                  RowBox[{
+                   RowBox[{"-", "MinSeparation"}], "-", "bracketThick"}], ",", 
+                  RowBox[{"-", "baseHingeHeight"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"hoopRad", "+", "bracketThick"}], ",", 
+                  RowBox[{
+                   RowBox[{"+", "MinSeparation"}], "+", "bracketThick"}], ",", 
+                  RowBox[{"+", "baseHingeHeight"}]}], "}"}]}], "}"}], "]"}], 
+             "\[IndentingNewLine]", "\[IndentingNewLine]", ","}], "*)"}], 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"Scan", " ", "plane"}], "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"Gray", ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"tipAng", " ", "=", " ", "\[Pi]"}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"scanRot", " ", "=", " ", 
+               RowBox[{"RotationMatrix", "[", 
+                RowBox[{"tipAng", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], "]"}]}], ";", 
+              "\[IndentingNewLine]", " ", 
+              RowBox[{"Arrow", "[", 
+               RowBox[{"120", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                  RowBox[{"scanRot", ".", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "0", ",", "0"}], "}"}]}]}], "}"}]}], 
+               "]"}]}], ",", "\[IndentingNewLine]", " ", 
+             RowBox[{"Arrow", "[", 
+              RowBox[{"120", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                 RowBox[{"scanRot", ".", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "1", ",", "0"}], "}"}]}]}], "}"}]}], 
+              "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Opacity", "[", "0.5", "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Polygon", "[", 
+              RowBox[{"120", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"scanRot", ".", "v"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"v", ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "1", ",", "0"}], "}"}]}], 
+                    "}"}]}], "}"}]}], "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+            RowBox[{"(*", 
+             RowBox[{"Polygon", "[", 
+              RowBox[{"100", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   SqrtBox["2"], ",", 
+                   RowBox[{"-", 
+                    SqrtBox["2"]}], ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   SqrtBox["2"], ",", 
+                   SqrtBox["2"], ",", "2"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", 
+                    SqrtBox["2"]}], ",", 
+                   SqrtBox["2"], ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", 
+                    SqrtBox["2"]}], ",", 
+                   RowBox[{"-", 
+                    SqrtBox["2"]}], ",", 
+                   RowBox[{"-", "2"}]}], "}"}]}], "}"}]}], "]"}], "*)"}], 
+            "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", "hoop1", "*)"}], "\[IndentingNewLine]", "Blue", ",", 
+           " ", "Thick", ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Opacity", "[", "OpacityVal", "]"}], ",", 
+             RowBox[{"Sphere", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"hoopRad", "+", "gearboxLength"}], ",", 
+                 "baseHingeHeight"}], "}"}], ",", "MinSeparation"}], "]"}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Rotate", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{"(*", 
+               RowBox[{
+                RowBox[{"Cylinder", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "carriageWidthHalf"}], ",", "0", ",", "0"}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"carriageWidthHalf", ",", "0", ",", "0"}], 
+                    "}"}]}], "}"}], ",", "hoopRad"}], "]"}], ","}], "*)"}], 
+              "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"Line", "[", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "carriageWidthHalf"}], ",", " ", 
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", " ", 
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]", ",", 
+                    RowBox[{"\[Pi]", "/", "12"}]}], "}"}]}], "]"}], "]"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"Line", "[", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"carriageWidthHalf", ",", " ", 
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", " ", 
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]", ",", 
+                    RowBox[{"\[Pi]", "/", "12"}]}], "}"}]}], "]"}], "]"}]}], 
+              "}"}], ",", "\[IndentingNewLine]", "\[Theta]y", ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", "gearbox", "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"Cylinder", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "hoopRad", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"hoopRad", "+", "gearboxLength"}], ",", "0"}], 
+                "}"}]}], "}"}], ",", "baseHingeHeight"}], "]"}], ",", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"(*", "hoop2", "*)"}], "\[IndentingNewLine]", "Red", ",", 
+           " ", "Thick", ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Opacity", "[", "OpacityVal", "]"}], ",", 
+             RowBox[{"Sphere", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"hoopRad", "+", "gearboxLength"}], ",", "0", ",", 
+                 "baseHingeHeight"}], "}"}], ",", "MinSeparation"}], "]"}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Rotate", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{"(*", 
+               RowBox[{
+                RowBox[{"Cylinder", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "carriageWidthHalf"}], ",", "0"}], "}"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "carriageWidthHalf", ",", "0"}], 
+                    "}"}]}], "}"}], ",", "hoopRad"}], "]"}], ","}], "*)"}], 
+              "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"Line", "[", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"{", " ", 
+                   RowBox[{
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+                    RowBox[{"-", "carriageWidthHalf"}], ",", " ", 
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]", ",", 
+                    RowBox[{"\[Pi]", "/", "12"}]}], "}"}]}], "]"}], "]"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"Line", "[", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"{", " ", 
+                   RowBox[{
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+                    "carriageWidthHalf", ",", "  ", 
+                    RowBox[{"hoopRad", " ", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]", ",", 
+                    RowBox[{"\[Pi]", "/", "12"}]}], "}"}]}], "]"}], "]"}]}], 
+              "}"}], ",", "\[Theta]x", ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", "gearbox", "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"Cylinder", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"hoopRad", ",", "0", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"hoopRad", "+", "gearboxLength"}], ",", "0", ",", 
+                 "0"}], "}"}]}], "}"}], ",", "baseHingeHeight"}], "]"}], ",", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"carriage", ":"}], "  ", "*)"}], "\[IndentingNewLine]", 
+           "Green", ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"Text", "[", 
+              RowBox[{
+               RowBox[{"StringForm", "[", 
+                RowBox[{"\"\<``\>\"", ",", 
+                 RowBox[{"ArcTan", "[", 
+                  RowBox[{"z", ",", "x"}], "]"}]}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], ","}], 
+            "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"Rotate", "[", 
+            RowBox[{
+             RowBox[{"Rotate", "[", 
+              RowBox[{
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{"(*", 
+                 RowBox[{
+                  RowBox[{"PointSize", "[", ".05", "]"}], ",", "Green", ",", 
+                  RowBox[{"Point", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "hoopRad"}], "}"}], "]"}], 
+                  ","}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"Cuboid", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "carriageWidthHalf"}], ",", 
+                    RowBox[{"-", "carriageWidthHalf"}], ",", 
+                    RowBox[{"hoopRad", "-", "CarriageThicknessHalf"}]}], 
+                    "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    "carriageWidthHalf", ",", "carriageWidthHalf", ",", 
+                    RowBox[{"hoopRad", "+", "CarriageThicknessHalf"}]}], 
+                    "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"If", "[", 
+                  RowBox[{"Horiz", ",", 
+                   RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{"(*", 
+                    RowBox[{"gearbox", ",", " ", "horizontal", ",", " ", 
+                    RowBox[{"102", " ", "min", " ", "length"}]}], "*)"}], 
+                    "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Cylinder", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", 
+                    RowBox[{"baseHingeHeight", "+", "hoopRad"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "gearbox3Length"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "gearbox3Length"}], ",", 
+                    RowBox[{"baseHingeHeight", "+", "hoopRad"}]}], "}"}]}], 
+                    "}"}], ",", "baseHingeHeight"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Opacity", "[", "OpacityVal", "]"}], ",", 
+                    RowBox[{"Sphere", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "gearbox3Length"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "gearbox3Length"}], ",", 
+                    RowBox[{
+                    RowBox[{"2", "baseHingeHeight"}], "+", "hoopRad"}]}], 
+                    "}"}], ",", 
+                    RowBox[{"MinSeparation", "-", "10"}]}], "]"}]}], "}"}]}], 
+                    "\[IndentingNewLine]", "}"}], ",", 
+                   RowBox[{
+                   "{", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    RowBox[{"(*", 
+                    RowBox[{"gearbox", ",", " ", "vertical", ",", " ", 
+                    RowBox[{"147", " ", "min", " ", "length"}]}], "*)"}], 
+                    "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Cylinder", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "baseHingeHeight"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "baseHingeHeight"}], ",", 
+                    "hoopRad"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "baseHingeHeight"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "baseHingeHeight"}], ",", 
+                    RowBox[{"gearbox3Length", "+", "hoopRad"}]}], "}"}]}], 
+                    "}"}], ",", "baseHingeHeight"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Opacity", "[", "OpacityVal", "]"}], ",", 
+                    RowBox[{"Sphere", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "baseHingeHeight"}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "1"}], "/", 
+                    RowBox[{"\[Sqrt]", "2"}]}], "baseHingeHeight"}], ",", 
+                    RowBox[{"gearbox3Length", "+", "hoopRad"}]}], "}"}], ",", 
+                    "MinSeparation"}], "]"}]}], "}"}]}], 
+                    "\[IndentingNewLine]", "}"}]}], "]"}]}], 
+                "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"ArcTan", "[", 
+                RowBox[{
+                 RowBox[{"\[Sqrt]", 
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    FractionBox["y", "xyzNorm"], ")"}], "2"]}], ")"}]}], ",", 
+                 
+                 FractionBox[
+                  RowBox[{"-", "y"}], "xyzNorm"]}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ArcTan", "[", 
+              RowBox[{"z", ",", "x"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"(*", "needle", "*)"}], "\[IndentingNewLine]", "Black", 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"Line", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"2", 
+               RowBox[{"hoopRad", "/", "xyzNorm"}], 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+              RowBox[{
+               RowBox[{"-", "2"}], 
+               RowBox[{"hoopRad", "/", "xyzNorm"}], 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "y", ",", "z"}], "}"}]}]}], "}"}], "]"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", "lvlSets", "*)"}], "\[IndentingNewLine]", 
+           "solidNeedleRange"}], "\[IndentingNewLine]", "\[IndentingNewLine]",
+           "}"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\[Theta]x", ",", "0"}], "}"}], ",", 
+       RowBox[{"-", "maxAngle"}], ",", "maxAngle", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\[Theta]y", ",", "0"}], "}"}], ",", 
+       RowBox[{"-", "maxAngle"}], ",", "maxAngle", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Horiz", ",", "True"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"True", ",", "False"}], "}"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"OpacityVal", ",", "0.5"}], "}"}], ",", "0", ",", "1"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"gearbox3Length", ",", "60"}], "}"}], ",", "0", ",", "150", 
+       ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"gearboxLength", ",", "75"}], "}"}], ",", "0", ",", "150", 
+       ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.599908298657193*^9, 3.599908360241184*^9}, {
+   3.599908424866503*^9, 3.599908477079921*^9}, {3.599908693125567*^9, 
+   3.599908835900682*^9}, {3.5999088885788307`*^9, 3.599909334624823*^9}, 
+   3.599909366312276*^9, {3.599909559715271*^9, 3.599909693534778*^9}, {
+   3.5999097288338127`*^9, 3.599909737382333*^9}, {3.59990978501676*^9, 
+   3.59990990404461*^9}, 3.599909972813846*^9, {3.5999100073732357`*^9, 
+   3.5999101579618607`*^9}, {3.599910223791127*^9, 3.59991022830958*^9}, {
+   3.5999102646339693`*^9, 3.599910268910434*^9}, {3.599911523899948*^9, 
+   3.59991156420994*^9}, {3.5999116090551643`*^9, 3.5999116431112833`*^9}, {
+   3.599911688746347*^9, 3.599911723443179*^9}, {3.59991176081627*^9, 
+   3.599911804049687*^9}, {3.599911878385332*^9, 3.5999119111405897`*^9}, {
+   3.599912066841332*^9, 3.599912067284837*^9}, {3.599912115093686*^9, 
+   3.5999121324815702`*^9}, {3.599912556490831*^9, 3.599912601127811*^9}, {
+   3.599912663106653*^9, 3.599912805708086*^9}, {3.599912980631572*^9, 
+   3.599913031424201*^9}, {3.5999161920389147`*^9, 3.599916198126341*^9}, {
+   3.599916234024145*^9, 3.599916237330575*^9}, {3.5999182169330072`*^9, 
+   3.5999182769305*^9}, {3.599918336928829*^9, 3.59991834808609*^9}, {
+   3.599928218691489*^9, 3.599928323901949*^9}, {3.5999283542576923`*^9, 
+   3.599928387020937*^9}, {3.599929341295535*^9, 3.599929404988249*^9}, {
+   3.599929981901291*^9, 3.599930055282568*^9}, {3.599930094601334*^9, 
+   3.5999302718538027`*^9}, {3.5999303124544163`*^9, 3.599930429970286*^9}, 
+   3.599930471066518*^9, {3.599930553935549*^9, 3.5999305913573303`*^9}, {
+   3.599931399727498*^9, 3.5999314168569517`*^9}, {3.5999314951556873`*^9, 
+   3.5999314990263767`*^9}, 3.599931542539178*^9, {3.599931575270422*^9, 
+   3.599931617512575*^9}, {3.599931717267138*^9, 3.5999317373284492`*^9}, {
+   3.5999319898316097`*^9, 3.5999320635629187`*^9}, {3.599932339938876*^9, 
+   3.599932412361785*^9}, {3.59993244382697*^9, 3.599932459915267*^9}, {
+   3.5999328038920813`*^9, 3.5999328658398113`*^9}, {3.599932900100247*^9, 
+   3.599932936654208*^9}, {3.5999329688594522`*^9, 3.5999329958931913`*^9}, {
+   3.599933123474966*^9, 3.599933183468521*^9}, {3.599933226224287*^9, 
+   3.5999332325433207`*^9}, {3.599933306002339*^9, 3.599933361478531*^9}, {
+   3.599933404509645*^9, 3.599933456481688*^9}, {3.599933493394087*^9, 
+   3.59993351858676*^9}, {3.599933884918097*^9, 3.599933885057932*^9}, {
+   3.599934580126782*^9, 3.599934610056353*^9}, {3.599960896936413*^9, 
+   3.599960977280027*^9}, {3.599961028648875*^9, 3.599961041013658*^9}, 
+   3.599961104944746*^9, {3.599961143342828*^9, 3.599961233387638*^9}, {
+   3.599961271219676*^9, 3.5999613816246357`*^9}, {3.599962742126878*^9, 
+   3.599962744167803*^9}, {3.599962777755001*^9, 3.599962779863756*^9}, {
+   3.599963796424403*^9, 3.599963813687664*^9}, {3.599965221277569*^9, 
+   3.599965222334269*^9}, {3.600100073044013*^9, 3.6001001061191483`*^9}, {
+   3.600100165163581*^9, 3.600100165337274*^9}, {3.600100210323217*^9, 
+   3.600100222958493*^9}, {3.600100392117235*^9, 3.600100437263411*^9}, {
+   3.600124235611761*^9, 3.6001243020941153`*^9}, {3.600126913371334*^9, 
+   3.600126931855299*^9}, {3.600126965321904*^9, 3.6001269882585497`*^9}, {
+   3.60012705906258*^9, 3.600127059371578*^9}, {3.600127176104889*^9, 
+   3.600127176209993*^9}, {3.600127435786831*^9, 3.600127435950471*^9}, {
+   3.600127476526572*^9, 3.600127476636753*^9}, {3.6001275185355597`*^9, 
+   3.600127519012994*^9}, {3.600128380719623*^9, 3.6001284121569843`*^9}, {
+   3.600128515975066*^9, 3.6001285166414833`*^9}, {3.6001287146004477`*^9, 
+   3.6001287164708347`*^9}, {3.60012876491757*^9, 3.600128765091003*^9}, {
+   3.600129143959174*^9, 3.6001292155762157`*^9}, {3.600129349362997*^9, 
+   3.6001293500599127`*^9}, {3.600129428924082*^9, 3.600129431806525*^9}, {
+   3.600174970153798*^9, 3.600174972601736*^9}, {3.600423392010254*^9, 
+   3.6004234653313103`*^9}, {3.600423582435298*^9, 3.600423618250659*^9}, {
+   3.600423650577138*^9, 3.6004236557057047`*^9}, {3.600431308227083*^9, 
+   3.600431317094524*^9}, {3.60043145207076*^9, 3.6004314777534103`*^9}, {
+   3.600431512068346*^9, 3.6004315465368443`*^9}, {3.6004315877067013`*^9, 
+   3.600431642217819*^9}, {3.60043171387287*^9, 3.6004317368023443`*^9}, {
+   3.600431767753285*^9, 3.600431795325712*^9}, {3.600431826378766*^9, 
+   3.600431843143894*^9}, {3.600432024469449*^9, 3.6004320265566998`*^9}, {
+   3.600432057270047*^9, 3.600432071983097*^9}, {3.600432183110805*^9, 
+   3.600432192337543*^9}, {3.6004322266217527`*^9, 3.600432247777989*^9}, {
+   3.600432621248886*^9, 3.600432629122377*^9}, {3.600432710364593*^9, 
+   3.600432736183229*^9}, {3.600434434687434*^9, 3.600434529779793*^9}, {
+   3.6004377344966927`*^9, 3.60043775378481*^9}, {3.600437799471058*^9, 
+   3.6004378134482*^9}, {3.600444640547962*^9, 3.600444658661107*^9}, {
+   3.6004458985761003`*^9, 3.6004459802627277`*^9}, {3.600446025058354*^9, 
+   3.60044607431879*^9}, {3.6004462539716578`*^9, 3.600446272008133*^9}, {
+   3.6004463102059927`*^9, 3.600446333162265*^9}, {3.60044656142397*^9, 
+   3.600446561796941*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`gearbox3Length$$ = 
+    60, $CellContext`gearboxLength$$ = 75, $CellContext`Horiz$$ = 
+    True, $CellContext`OpacityVal$$ = 0.5, $CellContext`\[Theta]x$$ = 
+    0, $CellContext`\[Theta]y$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Theta]x$$], 0}, Rational[-1, 6] Pi, Rational[1, 6] 
+      Pi}, {{
+       Hold[$CellContext`\[Theta]y$$], 0}, Rational[-1, 6] Pi, Rational[1, 6] 
+      Pi}, {{
+       Hold[$CellContext`Horiz$$], True}, {True, False}}, {{
+       Hold[$CellContext`OpacityVal$$], 0.5}, 0, 1}, {{
+       Hold[$CellContext`gearbox3Length$$], 60}, 0, 150}, {{
+       Hold[$CellContext`gearboxLength$$], 75}, 0, 150}}, Typeset`size$$ = {
+    576., {309., 314.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Theta]x$1043924$$ = 
+    0, $CellContext`\[Theta]y$1043925$$ = 0, $CellContext`Horiz$1043926$$ = 
+    False, $CellContext`OpacityVal$1043927$$ = 
+    0, $CellContext`gearbox3Length$1043928$$ = 
+    0, $CellContext`gearboxLength$1043929$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`gearbox3Length$$ = 
+        60, $CellContext`gearboxLength$$ = 75, $CellContext`Horiz$$ = 
+        True, $CellContext`OpacityVal$$ = 0.5, $CellContext`\[Theta]x$$ = 
+        0, $CellContext`\[Theta]y$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]x$$, $CellContext`\[Theta]x$1043924$$, 0], 
+        Hold[$CellContext`\[Theta]y$$, $CellContext`\[Theta]y$1043925$$, 0], 
+        Hold[$CellContext`Horiz$$, $CellContext`Horiz$1043926$$, False], 
+        Hold[$CellContext`OpacityVal$$, $CellContext`OpacityVal$1043927$$, 0], 
+        Hold[$CellContext`gearbox3Length$$, \
+$CellContext`gearbox3Length$1043928$$, 0], 
+        Hold[$CellContext`gearboxLength$$, \
+$CellContext`gearboxLength$1043929$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`hoopRad$ = 50, $CellContext`carriageWidthHalf$ = 
+         2, $CellContext`baseHingeHeight$ = 
+         8, $CellContext`CarriageThicknessHalf$ = 
+         2, $CellContext`bracketThick$ = 2, $CellContext`MinSeparation$ = 
+         1000 (0.11641453227603929`/2) + 
+          20, $CellContext`xyzNorm$ = (Cos[$CellContext`\[Theta]x$$]^2 + 
+           Cos[$CellContext`\[Theta]y$$]^2 Sin[$CellContext`\[Theta]x$$]^2)^
+          Rational[1, 2], $CellContext`x$ = 
+         Cos[$CellContext`\[Theta]x$$] 
+          Sin[$CellContext`\[Theta]y$$], $CellContext`y$ = (-
+           Cos[$CellContext`\[Theta]y$$]) 
+          Sin[$CellContext`\[Theta]x$$], $CellContext`z$ = 
+         Cos[$CellContext`\[Theta]x$$] 
+          Cos[$CellContext`\[Theta]y$$], $CellContext`scanRot$, \
+$CellContext`tipAng$}, 
+        Graphics3D[{White, 
+          
+          Cylinder[{{0, 0, -$CellContext`baseHingeHeight$ - 3}, {
+            0, 0, -$CellContext`baseHingeHeight$}}, $CellContext`hoopRad$], {
+          Gray, $CellContext`tipAng$ = Pi; $CellContext`scanRot$ = 
+            RotationMatrix[$CellContext`tipAng$, {1, 1, 1}]; 
+           Arrow[120 {{0, 0, 0}, 
+               Dot[$CellContext`scanRot$, {1, 0, 0}]}], 
+           Arrow[120 {{0, 0, 0}, 
+              Dot[$CellContext`scanRot$, {0, 1, 0}]}], 
+           Opacity[0.5], 
+           Polygon[120 Table[
+              
+              Dot[$CellContext`scanRot$, $CellContext`v], {$CellContext`v, {{
+               1, 1, 0}, {1, -1, 0}, {-1, -1, 0}, {-1, 1, 0}}}]]}, Blue, 
+          Thick, {
+           Opacity[$CellContext`OpacityVal$$], 
+           
+           Sphere[{0, $CellContext`hoopRad$ + $CellContext`gearboxLength$$, \
+$CellContext`baseHingeHeight$}, $CellContext`MinSeparation$]}, 
+          Rotate[{
+            Line[
+             Table[{-$CellContext`carriageWidthHalf$, $CellContext`hoopRad$ 
+               Cos[$CellContext`\[Theta]], $CellContext`hoopRad$ 
+               Sin[$CellContext`\[Theta]]}, {$CellContext`\[Theta], 0, Pi, Pi/
+               12}]], 
+            Line[
+             
+             Table[{$CellContext`carriageWidthHalf$, $CellContext`hoopRad$ 
+               Cos[$CellContext`\[Theta]], $CellContext`hoopRad$ 
+               Sin[$CellContext`\[Theta]]}, {$CellContext`\[Theta], 0, Pi, Pi/
+               12}]]}, $CellContext`\[Theta]y$$, {0, 1, 0}], 
+          
+          Cylinder[{{0, $CellContext`hoopRad$, 0}, {
+            0, $CellContext`hoopRad$ + $CellContext`gearboxLength$$, 
+             0}}, $CellContext`baseHingeHeight$], Red, Thick, {
+           Opacity[$CellContext`OpacityVal$$], 
+           
+           Sphere[{$CellContext`hoopRad$ + $CellContext`gearboxLength$$, 
+             0, $CellContext`baseHingeHeight$}, $CellContext`MinSeparation$]}, 
+          Rotate[{
+            Line[
+             
+             Table[{$CellContext`hoopRad$ 
+               Cos[$CellContext`\[Theta]], -$CellContext`carriageWidthHalf$, \
+$CellContext`hoopRad$ Sin[$CellContext`\[Theta]]}, {$CellContext`\[Theta], 0, 
+               Pi, Pi/12}]], 
+            Line[
+             
+             Table[{$CellContext`hoopRad$ 
+               Cos[$CellContext`\[Theta]], $CellContext`carriageWidthHalf$, \
+$CellContext`hoopRad$ Sin[$CellContext`\[Theta]]}, {$CellContext`\[Theta], 0, 
+               Pi, Pi/12}]]}, $CellContext`\[Theta]x$$, {1, 0, 0}], 
+          
+          Cylinder[{{$CellContext`hoopRad$, 0, 
+             0}, {$CellContext`hoopRad$ + $CellContext`gearboxLength$$, 0, 
+             0}}, $CellContext`baseHingeHeight$], Green, 
+          Rotate[
+           Rotate[{
+             
+             Cuboid[{-$CellContext`carriageWidthHalf$, \
+-$CellContext`carriageWidthHalf$, $CellContext`hoopRad$ - \
+$CellContext`CarriageThicknessHalf$}, {$CellContext`carriageWidthHalf$, \
+$CellContext`carriageWidthHalf$, $CellContext`hoopRad$ + \
+$CellContext`CarriageThicknessHalf$}], 
+             If[$CellContext`Horiz$$, {
+               
+               Cylinder[{{
+                 0, 0, $CellContext`baseHingeHeight$ + \
+$CellContext`hoopRad$}, {((-1)/Sqrt[2]) $CellContext`gearbox3Length$$, ((-1)/
+                   Sqrt[2]) $CellContext`gearbox3Length$$, \
+$CellContext`baseHingeHeight$ + $CellContext`hoopRad$}}, \
+$CellContext`baseHingeHeight$], {
+                Opacity[$CellContext`OpacityVal$$], 
+                
+                Sphere[{((-1)/Sqrt[2]) $CellContext`gearbox3Length$$, ((-1)/
+                   Sqrt[2]) $CellContext`gearbox3Length$$, 
+                  2 $CellContext`baseHingeHeight$ + $CellContext`hoopRad$}, \
+$CellContext`MinSeparation$ - 10]}}, {
+               
+               Cylinder[{{((-1)/Sqrt[2]) $CellContext`baseHingeHeight$, ((-1)/
+                   Sqrt[2]) $CellContext`baseHingeHeight$, \
+$CellContext`hoopRad$}, {((-1)/Sqrt[2]) $CellContext`baseHingeHeight$, ((-1)/
+                   Sqrt[2]) $CellContext`baseHingeHeight$, \
+$CellContext`gearbox3Length$$ + $CellContext`hoopRad$}}, \
+$CellContext`baseHingeHeight$], {
+                Opacity[$CellContext`OpacityVal$$], 
+                
+                Sphere[{((-1)/Sqrt[2]) $CellContext`baseHingeHeight$, ((-1)/
+                   Sqrt[2]) $CellContext`baseHingeHeight$, \
+$CellContext`gearbox3Length$$ + $CellContext`hoopRad$}, \
+$CellContext`MinSeparation$]}}]}, 
+            ArcTan[
+             Sqrt[
+             1 - ($CellContext`y$/$CellContext`xyzNorm$)^2], \
+-$CellContext`y$/$CellContext`xyzNorm$], {1, 0, 0}], 
+           ArcTan[$CellContext`z$, $CellContext`x$], {0, 1, 0}], Black, 
+          
+          Line[{2 ($CellContext`hoopRad$/$CellContext`xyzNorm$) \
+{$CellContext`x$, $CellContext`y$, $CellContext`z$}, {0, 0, 
+            0}, (-2) ($CellContext`hoopRad$/$CellContext`xyzNorm$) \
+{$CellContext`x$, $CellContext`y$, $CellContext`z$}}], \
+$CellContext`solidNeedleRange}, ImageSize -> Large]], 
+      "Specifications" :> {{{$CellContext`\[Theta]x$$, 0}, Rational[-1, 6] Pi,
+          Rational[1, 6] Pi, Appearance -> 
+         "Labeled"}, {{$CellContext`\[Theta]y$$, 0}, Rational[-1, 6] Pi, 
+         Rational[1, 6] Pi, Appearance -> 
+         "Labeled"}, {{$CellContext`Horiz$$, True}, {
+         True, False}}, {{$CellContext`OpacityVal$$, 0.5}, 0, 
+         1}, {{$CellContext`gearbox3Length$$, 60}, 0, 150, Appearance -> 
+         "Labeled"}, {{$CellContext`gearboxLength$$, 75}, 0, 150, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{619., {419., 425.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6004465709476223`*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 599},
+WindowMargins->{{28, Automatic}, {36, Automatic}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 6, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 29821, 635, 2073, "Input"],
+Cell[30403, 659, 9178, 180, 861, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
