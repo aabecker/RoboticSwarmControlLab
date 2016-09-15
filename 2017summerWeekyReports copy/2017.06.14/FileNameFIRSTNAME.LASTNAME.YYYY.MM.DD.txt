@@ -1,0 +1,4 @@
+Make your file names FIRSTNAME.LASTNAME.YYYY.MM.DD
+for example:
+AaronBecker.2016.06.01
+
